@@ -1,0 +1,19 @@
+.tariffs {
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 425px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    max-width: 405px;
+    margin-bottom: 64px;
+  }
+
+  &__list {
+    @include flex-column(10);
+  }
+}

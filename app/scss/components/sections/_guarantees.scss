@@ -1,0 +1,62 @@
+.guarantees {
+  padding: 152px 0;
+  border-radius: 24px;
+  border: 1px solid #F7F7F8;
+  background: linear-gradient(180deg, #F7F7F8 0%, rgba(247, 247, 248, 0.88) 100%);
+
+  &__title {
+    margin-bottom: 56px;
+    max-width: 800px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__card {
+    padding: 20px;
+    border-radius: 16px;
+    background: #FBFBFB;
+    box-shadow: 0 3px 4px 0 rgba(196, 196, 206, 0.16);
+  }
+
+  &__head {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+
+  &__signature {
+    font-family: $jetBrainsMono;
+    font-size: 14px;
+    color: rgba(#4D4D5A, .5);
+    line-height: 1;
+    letter-spacing: -0.15px;
+    margin-top: 9px;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__step {
+    height: max-content;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: $jetBrainsMono;
+    color: #4D4D5A;
+    margin-top: 3px;
+  }
+
+  &__text {
+    max-width: 250px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}

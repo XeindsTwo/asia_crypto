@@ -1,0 +1,37 @@
+.access {
+  border-radius: 24px;
+  border: 1px solid #F7F7F8;
+  background: linear-gradient(180deg, #F7F7F8 0%, rgba(247, 247, 248, 1) 100%);
+  padding-top: 56px;
+  overflow-y: hidden;
+  max-height: 680px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__content {
+    max-width: 310px;
+    margin-top: 96px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    line-height: 1.2;
+    max-width: 270px;
+  }
+
+  &__list {
+    max-width: 775px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+}

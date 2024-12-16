@@ -1,0 +1,35 @@
+.home {
+  &__title {
+    max-width: 840px;
+    margin-bottom: 100px;
+    font-size: 88px;
+    line-height: 83%;
+    font-weight: 400;
+    letter-spacing: -2.82px;
+  }
+
+  &__decor {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -15px;
+    margin-right: -4px;
+    transform: translateY(9px);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__info {
+    @include flex-column(32);
+    max-width: 270px;
+  }
+
+  &__lottie {
+    max-width: 775px;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+}
