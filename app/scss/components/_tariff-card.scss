@@ -34,6 +34,7 @@
 
     &--non-bottom {
       margin-bottom: 0;
+      align-items: stretch;
     }
   }
 
@@ -41,8 +42,9 @@
     @include flex-column(14);
 
     &--height-100 {
-      height: 100%;
-      align-items: stretch;
+      .btn {
+        margin-top: auto;
+      }
     }
   }
 

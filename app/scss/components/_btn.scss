@@ -90,6 +90,18 @@
     }
   }
 
+  &--gray {
+    border-color: rgba(#3F3F4D, .34);
+    background-color: transparent;
+    color: #2C2C3C;
+
+    &:focus {
+      background-color: rgba(#2C2C3C, .94);
+      border-color: transparent;
+      color: $white;
+    }
+  }
+
   &--disabled {
     pointer-events: none;
     user-select: none;

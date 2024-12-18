@@ -1,0 +1,45 @@
+.leading {
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__swiper {
+    margin-bottom: 56px;
+  }
+
+  &__card {
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #FBFBFB;
+    box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+  }
+
+  &__quotes {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  &__author {
+    @include flex-align-center(10);
+
+    img {
+      @include objectCoverBg;
+      border-radius: 50%;
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+    cursor: grab;
+  }
+
+  .swiper-slide {
+    max-width: 266px;
+    width: 100%;
+  }
+}

@@ -1,3 +1,162 @@
 .footer {
+  padding-bottom: 25px;
 
+  &__top {
+    @include flex-between-center-gap(30);
+    align-items: flex-end;
+    margin-bottom: 80px;
+  }
+
+  &__btn {
+    margin-bottom: 4px;
+  }
+
+  &__contacts {
+    @include flex-between-center-gap(30);
+    align-items: flex-end;
+    margin-bottom: 48px;
+  }
+
+  &__follow {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    font-family: $jetBrainsMono;
+    text-transform: uppercase;
+    color: #4D4D5A;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    @include flex-align-center(8);
+  }
+
+  &__link {
+    @include flex-align-center(12);
+    padding: 12px 16px;
+    border-radius: 16px;
+    min-width: 170px;
+    line-height: 1;
+    background: $white;
+    box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+    border: 1px solid transparent;
+    transition: background-color .4s, border .4s;
+
+    &:hover {
+      background-color: transparent;
+      border-color: #161616;
+    }
+
+    &--twitter {
+      &:focus {
+        background-color: #161616;
+        color: $white;
+
+        svg {
+          path {
+            fill: $white;
+          }
+
+          g path {
+            fill: #161616;
+          }
+        }
+
+        .footer__link-subscribes {
+          color: rgba($white, .8);
+        }
+      }
+    }
+
+    &--telegram {
+      &:focus {
+        background-color: #299bde;
+        color: $white;
+        border-color: transparent;
+
+        .footer__link-subscribes {
+          color: $white;
+        }
+      }
+    }
+
+    &-name {
+      font-size: 20px;
+      margin-bottom: 7px;
+      transition: color .4s;
+    }
+
+    &-subscribes {
+      font-family: $fragmentMono;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #4D4D5A;
+      transition: color .4s;
+    }
+  }
+
+  &__email {
+    @include flex-column(3);
+    align-items: flex-end;
+    margin-bottom: 12px;
+
+    &-link {
+      border: 1px solid transparent;
+      padding: 2px 2px 5px;
+      font-size: 20px;
+      line-height: 1;
+      margin-bottom: 4px;
+      border-radius: 4px;
+      transition: color .4s, border .4s, background-color .4s;
+
+      &:hover {
+        color: #D02138;
+      }
+
+      &:focus {
+        background-color: #D02138;
+        color: $white;
+      }
+    }
+
+    &-signature {
+      font-size: 14px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #4D4D5A;
+      font-family: $fragmentMono;
+    }
+  }
+
+  &__bottom {
+    @include flex-between-center-gap(30);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: $fragmentMono;
+  }
+
+  &__left {
+    @include flex-align-center(12);
+    line-height: 1.2;
+    color: rgba(#4D4D5A, .56);
+
+    p {
+      &:first-child {
+        font-family: $jetBrainsMono;
+      }
+    }
+
+    span {
+      width: 4px;
+      height: 4px;
+      background-color: rgba(#2C2C3C, .2);
+      border-radius: 50%;
+      transform: translateY(-1px);
+    }
+  }
+
+  &__copy {
+    color: rgba(#4D4D5A, .56);
+  }
 }

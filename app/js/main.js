@@ -1,16 +1,7 @@
-
-
 const html = document.documentElement;
 const menuBtn = document.querySelector('.menu-btn');
 const headerNav = document.querySelector('.header__mobile');
 const anchors = document.querySelectorAll('a.header__link.mobile');
-
-menuBtn.addEventListener('click', () => {
-  menuBtn.blur();
-  html.classList.toggle('active');
-  menuBtn.classList.toggle('active');
-  headerNav.classList.toggle('active');
-});
 
 function scrollToTarget(targetId) {
   const targetSection = document.querySelector(targetId);
@@ -57,3 +48,9 @@ document.querySelectorAll(".desktop").forEach(link => {
     }
   });
 });
+
+new Swiper('.leading__swiper', {
+  speed: 900,
+  spaceBetween: 8,
+  slidesPerView: 'auto'
+})
