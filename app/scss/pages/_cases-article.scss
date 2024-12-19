@@ -1,0 +1,62 @@
+.cases-article {
+  position: relative;
+
+  &__content {
+    max-width: 495px;
+    margin: -28px auto 120px;
+  }
+
+  &__signature {
+    font-size: 14px;
+    color: #D02138;
+    text-transform: uppercase;
+    font-family: $jetBrainsMono;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__text {
+    @include flex-column(24);
+
+    p {
+      color: rgba(#2C2C3C, .7);
+    }
+
+    blockquote {
+      @include flex-column(14);
+
+      &::before {
+        @include bg;
+        content: "";
+        width: 17px;
+        height: 13px;
+        background-image: url("../images/icons/blockqoutes.svg");
+      }
+    }
+  }
+
+  &__photo {
+    @include flex-column(12);
+    margin-bottom: 8px;
+
+    img {
+      @include objectCoverBg;
+      border-radius: 16px;
+      border: 1px solid rgba(43, 43, 70, 0.12);
+      box-shadow: 0 8px 16px 0 rgba(25, 26, 32, 0.04);
+    }
+  }
+
+  &__alt {
+    font-family: $jetBrainsMono;
+    font-size: 14px;
+    font-weight: 700;
+    color: #888897;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,132 @@
+.cases {
+  margin-bottom: 120px;
+  position: relative;
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__tabs {
+    @include flex-align-center(10);
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  &__tab {
+    @include flex-align-center(4);
+    align-items: flex-start;
+    color: rgba(#2C2C3C, .3);
+    font-size: 40px;
+    letter-spacing: -0.8px;
+    line-height: 1;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: color .4s, border .4s, background-color .4s;
+
+    &:hover {
+      color: #2c2c3c;
+    }
+
+    &:focus {
+      border-color: #D02138;
+      color: #161616;
+
+      &::before {
+        background-color: transparent;
+      }
+    }
+
+    &::before {
+      @include pseudo;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color .4s;
+    }
+
+    &--active {
+      color: #2C2C3C;
+      pointer-events: none;
+
+      &::before {
+        background-color: #2C2C3C;
+      }
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &__card {
+    @include flex-column(0);
+    padding: 20px;
+    min-height: 330px;
+    border-radius: 16px;
+    background: #FBFBFB;
+    box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+  }
+
+  &__head {
+    @include flex-align-center(10);
+    margin-bottom: 16px;
+    font-family: $jetBrainsMono;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.15px;
+
+    img {
+      height: auto;
+      width: 14px;
+    }
+  }
+
+  &__name {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 400;
+    word-break: break-word;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    margin-top: auto;
+
+    &:hover {
+      background-color: transparent;
+      border-color: #D02138;
+      color: #161616;
+    }
+  }
+
+  &__not-found {
+    font-size: 16px;
+    text-align: center;
+    color: #86202c;
+    text-transform: uppercase;
+    font-family: $jetBrainsMono;
+  }
+
+  &__more {
+    @include flex-center;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(180deg, rgba(241, 241, 245, 0.00) 0%, #F1F1F5 100%);
+
+    &-btn {
+      background-color: #FBFBFB;
+      border-color: rgba(#000, .15);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.about-start {
+  &__title {
+    margin-bottom: 66px;
+  }
+
+  &__items {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 104px;
+  }
+
+  &__card {
+    @include flex-column(50);
+    min-height: 470px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #FBFBFB;
+    box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+  }
+
+  &__head {
+    position: relative;
+
+    img {
+      @include objectCoverBg;
+      margin-left: auto;
+    }
+  }
+
+  &__signature {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #4D4D5A;
+    font-family: $jetBrainsMono;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: auto;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  &__decor {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__line {
+    height: 1px;
+    width: 96%;
+    background-color: #cccccc;
+  }
+}
