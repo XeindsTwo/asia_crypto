@@ -1,3 +1,16 @@
 .agreement {
+  &__content {
+    max-width: 495px;
+    margin: -44px auto 120px;
+  }
 
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__text {
+    @include flex-column(24);
+    color: rgba(#2C2C3C, .7);
+    line-height: 1.2;
+  }
 }
