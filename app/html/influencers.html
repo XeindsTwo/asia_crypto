@@ -1,0 +1,482 @@
+@include('components/_head.html', {
+title: 'Asia Crypto | influencers'
+})
+
+<body class="body">
+@include('components/_header.html')
+<main>
+  <section class="influencers indent">
+    <div class="container">
+      <h1 class="influencers__title title-section title-section--big">
+        Influencers
+      </h1>
+      <div class="influencers__head">
+        <ul class="influencers__tabs">
+          <li>
+            <button class="influencers__tab influencers__tab--active" data-tab="0" tabindex="-1" type="button">
+              YouTube
+            </button>
+          </li>
+          <li>
+            <button class="influencers__tab" data-tab="1" type="button">
+              X (Twitter)
+            </button>
+          </li>
+          <li>
+            <button class="influencers__tab" data-tab="2" type="button">
+              Telegram
+            </button>
+          </li>
+        </ul>
+        <div class="influencers__sorting">
+          <button class="influencers__sorting-btn" type="button">
+            Sorting by Subscribes
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path
+                  d="M11.3205 2.75H10.4159C10.3543 2.75 10.2964 2.77686 10.2603 2.8209L6.83356 7.02754L3.40686 2.8209C3.37068 2.77686 3.31278 2.75 3.25127 2.75H2.34665C2.26825 2.75 2.22241 2.82949 2.26825 2.88643L6.52117 8.1082C6.67556 8.29727 6.99157 8.29727 7.14475 8.1082L11.3977 2.88643C11.4447 2.82949 11.3989 2.75 11.3205 2.75Z"
+                  fill="#4D4D5A"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <ul class="influencers__cards">
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/1.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              34.5k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Africa, Egypt
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">CryptanyDoge</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/2.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              18.7k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, france
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">TechSavvy</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/3.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              92.1k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            north america, usa
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnovaTech</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/4.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              55.2k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            sorth america, brazil
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnoHive</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/5.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              73.8k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, germany
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">DigitalTrendz</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="2">
+          <div class="influencer-card__head">
+            <img src="images/avatars/6.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              27.3k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Asia, China
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">BizTechNews</h3>
+            <p class="influencer-card__platform">
+              Telegram
+              <img src="images/icons/telegram.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/1.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              34.5k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Africa, Egypt
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">CryptanyDoge</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/2.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              18.7k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, france
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">TechSavvy</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/3.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              92.1k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            north america, usa
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnovaTech</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/4.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              55.2k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            sorth america, brazil
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnoHive</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/5.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              73.8k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, germany
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">DigitalTrendz</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="2">
+          <div class="influencer-card__head">
+            <img src="images/avatars/6.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              27.3k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Asia, China
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">BizTechNews</h3>
+            <p class="influencer-card__platform">
+              Telegram
+              <img src="images/icons/telegram.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/1.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              34.5k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Africa, Egypt
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">CryptanyDoge</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/2.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              18.7k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, france
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">TechSavvy</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/3.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              92.1k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            north america, usa
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnovaTech</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/4.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              55.2k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            sorth america, brazil
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnoHive</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/5.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              73.8k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, germany
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">DigitalTrendz</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="2">
+          <div class="influencer-card__head">
+            <img src="images/avatars/6.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              27.3k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Asia, China
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">BizTechNews</h3>
+            <p class="influencer-card__platform">
+              Telegram
+              <img src="images/icons/telegram.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+      </ul>
+      <div class="cases__more">
+        <button class="cases__more-btn btn btn--gray" type="button">Load more</button>
+      </div>
+    </div>
+  </section>
+  <div class="influencers__decor">
+    <div class="influencers__line indent"></div>
+  </div>
+  @include('components/sections/_tariffs.html')
+  @include('components/sections/_features.html')
+  <div class="indent"></div>
+  @include('components/sections/_guarantees.html')
+</main>
+@include('components/_footer.html')
+@include('components/_modal-quote.html')
+@include('components/_modal-success.html')
+<script src="js/main.min.js" type="module"></script>
+<script src="js/tabsInfluencers.js"></script>
+</body>

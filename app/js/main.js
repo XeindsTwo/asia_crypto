@@ -1,3 +1,8 @@
+import {modalQuote} from "./components/modalQuote.js";
+
+modalQuote();
+
+/*
 const html = document.documentElement;
 const menuBtn = document.querySelector('.menu-btn');
 const headerNav = document.querySelector('.header__mobile');
@@ -47,10 +52,4 @@ document.querySelectorAll(".desktop").forEach(link => {
       });
     }
   });
-});
-
-new Swiper('.leading__swiper', {
-  speed: 900,
-  spaceBetween: 8,
-  slidesPerView: 'auto'
-})
+});*/

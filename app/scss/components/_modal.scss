@@ -1,16 +1,15 @@
 .modal {
   @include topLeft50;
-  @include flex-center;
-  flex-direction: column;
-  text-align: center;
   position: fixed;
-  max-width: 375px;
+  max-width: 360px;
   width: 96%;
-  border-radius: 10px;
-  background-color: #161628;
-  padding: 40px 20px 35px;
+  padding: 40px 24px;
   opacity: 0;
   visibility: hidden;
+  z-index: 50;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #F7F7F8 0%, rgba(247, 247, 248, 0.94) 100%);
+  box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
   transform: translate(-50%, -25%);
   transition: transform .45s ease-in-out, visibility .4s, opacity .4s;
 
@@ -22,65 +21,52 @@
 
   &__close {
     @include flex-center;
+    width: 44px;
+    height: 44px;
     padding: 2px;
     position: absolute;
-    top: 25px;
-    right: 20px;
-    border-radius: 4px;
+    top: -42px;
+    right: -42px;
     border: 1px solid transparent;
-    transition: border .4s;
-    @include r($sm) {
-      top: 20px;
-      right: 15px;
-    }
-    @include r($phone) {
-      top: 17px;
-      right: 12px;
-    }
+    border-radius: 40px;
+    background-color: #F7F7F8;
+    box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+    transition: border .4s, background-color .4s;
 
     &:hover {
+      border-color: #D02138;
+      background-color: transparent;
+
       svg path {
-        stroke: $accent;
-        stroke-opacity: 0.7;
+        fill: $white;
       }
     }
 
     &:focus {
-      border-color: $accent;
+      background-color: #b63f4c;
+      border-color: transparent;
 
       svg path {
-        stroke: $white;
-        stroke-opacity: .8;
+        fill: $white;
       }
     }
   }
 
-  &__img {
-    @include objectCoverBg;
-    margin-bottom: 25px;
-    @include r($sm) {
-      width: 65px;
-      height: 65px;
-    }
-  }
-
   &__title {
-    line-height: 1.3;
-    font-weight: 500;
-    font-size: 20px;
-    color: $white;
+    line-height: 1.1;
+    font-weight: 400;
+    font-size: 40px;
     margin-bottom: 12px;
-    @include r($phone) {
-      font-size: 18px;
-      max-width: 280px;
-    }
   }
 
-  &__text {
-    color: rgba($white, .6);
+  &__subtext {
+    color: #2C2C3C;
     font-size: 18px;
-    @include r($phone) {
-      font-size: 16px;
-    }
+    margin-bottom: 32px;
+  }
+
+  &__fields {
+    @include flex-column(8);
+    margin-bottom: 32px;
   }
 }

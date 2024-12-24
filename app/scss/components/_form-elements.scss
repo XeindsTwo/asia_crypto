@@ -10,14 +10,32 @@
 }
 
 .input {
-  padding: 24px;
-  border-radius: 16px;
+  padding: 15px 0 12px;
+  border-radius: 0;
   width: 100%;
-  color: $white;
+  color: #2C2C3C;
+  line-height: 1.2;
   font-weight: 500;
-  background-color: #161628;
+  letter-spacing: -0.18px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(#2C2C3C, .24);
+  transition: background-color .4s, color .4s, border .4s;
   @include r($tablet) {
     padding: 22px 18px;
+  }
+
+  &:hover {
+    &::placeholder {
+      color: #D02138;
+    }
+  }
+
+  &:focus {
+    border-bottom-color: #D02138;
+
+    &::placeholder {
+      color: rgba(#2C2C3C, .7);
+    }
   }
 
   &:-webkit-autofill,
@@ -28,6 +46,11 @@
 
   &:-webkit-autofill:hover {
     -webkit-text-fill-color: $white;
+  }
+
+  &::placeholder {
+    color: rgba(#2C2C3C, .7);
+    transition: color .4s;
   }
 
   &--textarea {

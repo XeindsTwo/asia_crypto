@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta http-equiv="content-type" content="public, max-age=3600">
   <meta name="theme-color" content="#fff"/>
-  <title>Asia Crypto</title>
+  <title>Asia Crypto | influencers</title>
   <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -73,40 +73,42 @@
   </div>
 </header>
 <main>
-  <section class="home indent" id="home">
-  <div class="container">
-    <h1 class="home__title">
-      Enhance your crypto brand
-      <img class="home__decor" src="images/icons/icons-home-section.svg" width="80" height="80" alt="image icon container">
-      with AsiaCrypto influencers.
-    </h1>
-    <div class="home__inner">
-      <div class="home__info">
-        <p>
-          Unlock new growth opportunities by connecting with top-tier influencers on YouTube, X, and Telegram. Drive
-          visibility, engagement, and results
-        </p>
-        <a class="btn" href="#price">Get Price</a>
+  <section class="influencers indent">
+    <div class="container">
+      <h1 class="influencers__title title-section title-section--big">
+        Influencers
+      </h1>
+      <div class="influencers__head">
+        <ul class="influencers__tabs">
+          <li>
+            <button class="influencers__tab influencers__tab--active" data-tab="0" tabindex="-1" type="button">
+              YouTube
+            </button>
+          </li>
+          <li>
+            <button class="influencers__tab" data-tab="1" type="button">
+              X (Twitter)
+            </button>
+          </li>
+          <li>
+            <button class="influencers__tab" data-tab="2" type="button">
+              Telegram
+            </button>
+          </li>
+        </ul>
+        <div class="influencers__sorting">
+          <button class="influencers__sorting-btn" type="button">
+            Sorting by Subscribes
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path
+                  d="M11.3205 2.75H10.4159C10.3543 2.75 10.2964 2.77686 10.2603 2.8209L6.83356 7.02754L3.40686 2.8209C3.37068 2.77686 3.31278 2.75 3.25127 2.75H2.34665C2.26825 2.75 2.22241 2.82949 2.26825 2.88643L6.52117 8.1082C6.67556 8.29727 6.99157 8.29727 7.14475 8.1082L11.3977 2.88643C11.4447 2.82949 11.3989 2.75 11.3205 2.75Z"
+                  fill="#4D4D5A"/>
+            </svg>
+          </button>
+        </div>
       </div>
-      <lottie-player class="home__lottie" src="images/hero-an.json" background="transparent" speed="1" loop
-                     autoplay></lottie-player>
-    </div>
-  </div>
-</section>
-  <section class="access indent">
-  <div class="container">
-    <div class="access__inner">
-      <div class="access__content">
-        <h2 class="access__title title-section">
-          Access asia’s most influential crypto voices!
-        </h2>
-        <p class="access__text">
-          Engage with CryptoAsia's leading crypto influencers to amplify your currency brand's reach
-        </p>
-        <a class="access__link btn" href="/">Get Price</a>
-      </div>
-      <ul class="access__list">
-        <li class="influencer-card">
+      <ul class="influencers__cards">
+        <li class="influencer-card" data-tab-content="0">
           <div class="influencer-card__head">
             <img src="images/avatars/1.png" width="124" height="124" alt="CryptanyDoge">
             <p class="influencer-card__subscribes">
@@ -125,9 +127,11 @@
               <img src="images/icons/youtube.svg" alt="">
             </p>
           </div>
-          <button class="btn btn--disabled" type="button" disabled>Start Campaign</button>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
         </li>
-        <li class="influencer-card">
+        <li class="influencer-card" data-tab-content="1">
           <div class="influencer-card__head">
             <img src="images/avatars/2.png" width="124" height="124" alt="CryptanyDoge">
             <p class="influencer-card__subscribes">
@@ -146,9 +150,11 @@
               <img src="images/icons/twitter.svg" alt="">
             </p>
           </div>
-          <button class="btn btn--disabled" type="button" disabled>Start Campaign</button>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
         </li>
-        <li class="influencer-card">
+        <li class="influencer-card" data-tab-content="0">
           <div class="influencer-card__head">
             <img src="images/avatars/3.png" width="124" height="124" alt="CryptanyDoge">
             <p class="influencer-card__subscribes">
@@ -167,9 +173,12 @@
               <img src="images/icons/youtube.svg" alt="">
             </p>
           </div>
-          <button class="btn btn--disabled" type="button" disabled>Start Campaign</button>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
         </li>
-        <li class="influencer-card">
+        <li class="influencer-card" data-tab-content="0">
           <div class="influencer-card__head">
             <img src="images/avatars/4.png" width="124" height="124" alt="CryptanyDoge">
             <p class="influencer-card__subscribes">
@@ -188,9 +197,12 @@
               <img src="images/icons/youtube.svg" alt="">
             </p>
           </div>
-          <button class="btn btn--disabled" type="button" disabled>Start Campaign</button>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
         </li>
-        <li class="influencer-card">
+        <li class="influencer-card" data-tab-content="1">
           <div class="influencer-card__head">
             <img src="images/avatars/5.png" width="124" height="124" alt="CryptanyDoge">
             <p class="influencer-card__subscribes">
@@ -209,9 +221,11 @@
               <img src="images/icons/twitter.svg" alt="">
             </p>
           </div>
-          <button class="btn btn--disabled" type="button" disabled>Start Campaign</button>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
         </li>
-        <li class="influencer-card">
+        <li class="influencer-card" data-tab-content="2">
           <div class="influencer-card__head">
             <img src="images/avatars/6.png" width="124" height="124" alt="CryptanyDoge">
             <p class="influencer-card__subscribes">
@@ -230,245 +244,299 @@
               <img src="images/icons/telegram.svg" alt="">
             </p>
           </div>
-          <button class="btn btn--disabled" type="button" disabled>Start Campaign</button>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/1.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              34.5k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Africa, Egypt
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">CryptanyDoge</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/2.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              18.7k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, france
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">TechSavvy</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/3.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              92.1k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            north america, usa
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnovaTech</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/4.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              55.2k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            sorth america, brazil
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnoHive</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/5.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              73.8k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, germany
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">DigitalTrendz</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="2">
+          <div class="influencer-card__head">
+            <img src="images/avatars/6.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              27.3k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Asia, China
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">BizTechNews</h3>
+            <p class="influencer-card__platform">
+              Telegram
+              <img src="images/icons/telegram.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/1.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              34.5k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Africa, Egypt
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">CryptanyDoge</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/2.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              18.7k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, france
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">TechSavvy</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/3.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              92.1k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            north america, usa
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnovaTech</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="0">
+          <div class="influencer-card__head">
+            <img src="images/avatars/4.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              55.2k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            sorth america, brazil
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">InnoHive</h3>
+            <p class="influencer-card__platform">
+              YouTube
+              <img src="images/icons/youtube.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+            <button class="influencer-card__btn btn btn--gray" type="button">Statistics</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="1">
+          <div class="influencer-card__head">
+            <img src="images/avatars/5.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              73.8k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            europe, germany
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">DigitalTrendz</h3>
+            <p class="influencer-card__platform">
+              Twitter
+              <img src="images/icons/twitter.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
+        </li>
+        <li class="influencer-card" data-tab-content="2">
+          <div class="influencer-card__head">
+            <img src="images/avatars/6.png" width="124" height="124" alt="CryptanyDoge">
+            <p class="influencer-card__subscribes">
+              <img src="images/icons/subscribes.svg" width="14" height="14" alt="subscribes icon">
+              27.3k
+            </p>
+          </div>
+          <p class="influencer-card__geo">
+            <img src="images/icons/geo.svg" width="12" height="12" alt="geo icon">
+            Asia, China
+          </p>
+          <div class="influencer-card__info">
+            <h3 class="influencer-card__name">BizTechNews</h3>
+            <p class="influencer-card__platform">
+              Telegram
+              <img src="images/icons/telegram.svg" alt="">
+            </p>
+          </div>
+          <div class="influencer-card__actions">
+            <button class="influencer-card__btn btn" type="button">Account</button>
+          </div>
         </li>
       </ul>
-    </div>
-  </div>
-</section>
-  <section class="features">
-<div class="container">
-    <div class="features__top">
-      <div class="features__content">
-        <h2 class="title-section title-section--small">
-          Choosing AsiaCrypto <br> for your project is a decision that can
-          <img src="images/icons/title-sput.svg" width="50" height="50" alt="decor icon">
-          significantly impact your success. With
-          a robust infrastructure, a dedicated team!
-        </h2>
-        <p class="features__text">
-          AsiaCrypto combines regional expertise with a network of top-performing influencers to deliver unbeatable
-          results for your crypto project
-        </p>
+      <div class="cases__more">
+        <button class="cases__more-btn btn btn--gray" type="button">Load more</button>
       </div>
     </div>
-    <ul class="features__list">
-      <li class="features__card">
-        <h3 class="features__name">Focus on Asia</h3>
-        <img class="features__img" src="images/features/1.svg" width="232" height="232" alt="decor icon">
-        <span class="features__number">01.</span>
-        <p class="features__description">
-          Your gateway to the booming crypto markets Asia
-        </p>
-      </li>
-      <li class="features__card">
-        <h3 class="features__name">Verified User</h3>
-        <img class="features__img" src="images/features/2.svg" width="232" height="232" alt="decor icon">
-        <span class="features__number">02.</span>
-        <p class="features__description">
-          Work only with influencers who deliver real results
-        </p>
-      </li>
-      <li class="features__card">
-        <h3 class="features__name">Performance</h3>
-        <img class="features__img" src="images/features/3.svg" width="232" height="232" alt="decor icon">
-        <span class="features__number">03.</span>
-        <p class="features__description">
-          Campaigns designed to maximize ROI and reach
-        </p>
-      </li>
-      <li class="features__card">
-        <h3 class="features__name">Experience</h3>
-        <img class="features__img" src="images/features/4.svg" width="232" height="232" alt="decor icon">
-        <span class="features__number">04.</span>
-        <p class="features__description">
-          Transparent processes and secure collaboration
-        </p>
-      </li>
-    </ul>
+  </section>
+  <div class="influencers__decor">
+    <div class="influencers__line indent"></div>
   </div>
-</section>
-  <section class="trust indent">
-  <div class="container">
-    <div class="trust__content">
-      <h2 class="trust__title">
-        Trusted by more than 2,600 leading firms worldwide
-      </h2>
-      <ul class="trust__list">
-        <li class="trust__item">
-          <span class="trust__name">Legder</span>
-          <div class="trust__inner">
-            <img src="images/icons/ledger.svg" width="111" height="37" alt="ledger icon">
-          </div>
-        </li>
-        <li class="trust__item">
-          <span class="trust__name">Binance</span>
-          <div class="trust__inner">
-            <img src="images/icons/binance.svg" width="143" height="29" alt="Binance icon">
-          </div>
-        </li>
-        <li class="trust__item">
-          <span class="trust__name">Gate.io</span>
-          <div class="trust__inner">
-            <img src="images/icons/gate.svg" width="110" height="25" alt="Gate.io icon">
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-  <section class="guarantees indent">
-  <div class="container">
-    <h2 class="guarantees__title title-section title-section--big">
-      Effortless campaigns, guaranteed results.
-    </h2>
-    <ul class="guarantees__list">
-      <li class="guarantees__card">
-        <div class="guarantees__head">
-          <span class="guarantees__signature">[pic]</span>
-          <img src="images/guarantees/1.svg" width="256" height="256" alt="decor icon">
-        </div>
-        <div class="guarantees__info">
-          <span class="guarantees__step">Step 1:</span>
-          <p class="guarantees__text">
-            Explore and choose influencers who resonate with the specific needs and goals of your project
-          </p>
-        </div>
-      </li>
-      <li class="guarantees__card">
-        <div class="guarantees__head">
-          <span class="guarantees__signature">[pic]</span>
-          <img src="images/guarantees/2.svg" width="256" height="256" alt="decor icon">
-        </div>
-        <div class="guarantees__info">
-          <span class="guarantees__step">Step 2:</span>
-          <p class="guarantees__text">
-            Browse and select influencers that align with your best love project’s needs
-          </p>
-        </div>
-      </li>
-      <li class="guarantees__card">
-        <div class="guarantees__head">
-          <span class="guarantees__signature">[pic]</span>
-          <img src="images/guarantees/3.svg" width="256" height="256" alt="decor icon">
-        </div>
-        <div class="guarantees__info">
-          <span class="guarantees__step">Step 3:</span>
-          <p class="guarantees__text">
-            Keep an eye on your progress and witness your brand flourish exponentially like never before
-          </p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-  <section class="leading indent">
-  <div class="container">
-    <h2 class="leading__title title-section title-section--big">The leading voices.</h2>
-    <div class="leading__swiper swiper">
-      <ul class="swiper-wrapper">
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              So, I just rented some Instagram and TikTok accounts that have more. I'm super excited because
-              I'm planning to use them for a two-week campaign
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              CryptoNova
-            </div>
-          </div>
-        </li>
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              The Instagram and TikTok accounts I just rented have a combined following of over 200K users. I can't wait to launch a creative marketing campaign using them
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              BlockSphere
-            </div>
-          </div>
-        </li>
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              I recently rented Instagram and TikTok accounts with over 100K followers for a two-week campaign
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              ChainWave
-            </div>
-          </div>
-        </li>
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              Excited to announce that I've secured Instagram and TikTok accounts for our upcoming marketing campaign. They have a massive reach and will help us achieve our goals
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              TokenForge
-            </div>
-          </div>
-        </li>
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              I'm excited to share that I've obtained Instagram and TikTok accounts for our upcoming marketing initiative
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              DigiVault
-            </div>
-          </div>
-        </li>
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              I recently rented Instagram and TikTok accounts with over 100K followers for a two-week campaign
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              ChainWave
-            </div>
-          </div>
-        </li>
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              Excited to announce that I've secured Instagram and TikTok accounts for our upcoming marketing campaign. They have a massive reach and will help us achieve our goals
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              TokenForge
-            </div>
-          </div>
-        </li>
-        <li class="swiper-slide">
-          <div class="leading__card">
-            <img class="leading__quotes" src="images/icons/quotes.svg" width="20" height="15" alt="quotes decor icon">
-            <p class="leading__text">
-              I'm excited to share that I've obtained Instagram and TikTok accounts for our upcoming marketing initiative
-            </p>
-            <div class="leading__author">
-              <img src="images/avatars/1.png" width="28" height="28" alt="CryptoNova">
-              DigiVault
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <a class="leading__btn btn" href="">read all cases</a>
-  </div>
-</section>
   <section class="tariffs indent">
   <div class="container">
     <div class="tariffs__wrapper">
@@ -593,6 +661,104 @@
         </li>
       </ul>
     </div>
+  </div>
+</section>
+  <section class="features">
+<div class="container">
+    <div class="features__top">
+      <div class="features__content">
+        <h2 class="title-section title-section--small">
+          Choosing AsiaCrypto <br> for your project is a decision that can
+          <img src="images/icons/title-sput.svg" width="50" height="50" alt="decor icon">
+          significantly impact your success. With
+          a robust infrastructure, a dedicated team!
+        </h2>
+        <p class="features__text">
+          AsiaCrypto combines regional expertise with a network of top-performing influencers to deliver unbeatable
+          results for your crypto project
+        </p>
+      </div>
+    </div>
+    <ul class="features__list">
+      <li class="features__card">
+        <h3 class="features__name">Focus on Asia</h3>
+        <img class="features__img" src="images/features/1.svg" width="232" height="232" alt="decor icon">
+        <span class="features__number">01.</span>
+        <p class="features__description">
+          Your gateway to the booming crypto markets Asia
+        </p>
+      </li>
+      <li class="features__card">
+        <h3 class="features__name">Verified User</h3>
+        <img class="features__img" src="images/features/2.svg" width="232" height="232" alt="decor icon">
+        <span class="features__number">02.</span>
+        <p class="features__description">
+          Work only with influencers who deliver real results
+        </p>
+      </li>
+      <li class="features__card">
+        <h3 class="features__name">Performance</h3>
+        <img class="features__img" src="images/features/3.svg" width="232" height="232" alt="decor icon">
+        <span class="features__number">03.</span>
+        <p class="features__description">
+          Campaigns designed to maximize ROI and reach
+        </p>
+      </li>
+      <li class="features__card">
+        <h3 class="features__name">Experience</h3>
+        <img class="features__img" src="images/features/4.svg" width="232" height="232" alt="decor icon">
+        <span class="features__number">04.</span>
+        <p class="features__description">
+          Transparent processes and secure collaboration
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+  <div class="indent"></div>
+  <section class="guarantees indent">
+  <div class="container">
+    <h2 class="guarantees__title title-section title-section--big">
+      Effortless campaigns, guaranteed results.
+    </h2>
+    <ul class="guarantees__list">
+      <li class="guarantees__card">
+        <div class="guarantees__head">
+          <span class="guarantees__signature">[pic]</span>
+          <img src="images/guarantees/1.svg" width="256" height="256" alt="decor icon">
+        </div>
+        <div class="guarantees__info">
+          <span class="guarantees__step">Step 1:</span>
+          <p class="guarantees__text">
+            Explore and choose influencers who resonate with the specific needs and goals of your project
+          </p>
+        </div>
+      </li>
+      <li class="guarantees__card">
+        <div class="guarantees__head">
+          <span class="guarantees__signature">[pic]</span>
+          <img src="images/guarantees/2.svg" width="256" height="256" alt="decor icon">
+        </div>
+        <div class="guarantees__info">
+          <span class="guarantees__step">Step 2:</span>
+          <p class="guarantees__text">
+            Browse and select influencers that align with your best love project’s needs
+          </p>
+        </div>
+      </li>
+      <li class="guarantees__card">
+        <div class="guarantees__head">
+          <span class="guarantees__signature">[pic]</span>
+          <img src="images/guarantees/3.svg" width="256" height="256" alt="decor icon">
+        </div>
+        <div class="guarantees__info">
+          <span class="guarantees__step">Step 3:</span>
+          <p class="guarantees__text">
+            Keep an eye on your progress and witness your brand flourish exponentially like never before
+          </p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 </main>
@@ -733,6 +899,6 @@
   </p>
   <button class="btn" type="button">Go to Home</button>
 </div>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="js/main.min.js" type="module"></script>
+<script src="js/tabsInfluencers.js"></script>
 </body>
