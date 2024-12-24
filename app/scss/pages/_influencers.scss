@@ -3,17 +3,32 @@
 
   &__title {
     margin-bottom: 56px;
+    @include r($desktop) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 530px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__head {
     @include flex-between-center-gap(60);
     flex-wrap: wrap;
     margin-bottom: 40px;
+    @media (max-width: 715px) {
+      gap: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
   }
 
   &__tabs {
     @include flex-align-center(10);
     flex-wrap: wrap;
+    @include r($sm) {
+      gap: 16px 10px;
+    }
   }
 
   &__tab {
@@ -28,6 +43,24 @@
     border-radius: 5px;
     border: 2px solid transparent;
     transition: color .4s, border .4s, background-color .4s;
+    @include r($desktop) {
+      font-size: 36px;
+    }
+    @include r($lg) {
+      font-size: 32px;
+    }
+    @media (max-width: 900px) {
+      font-size: 30px;
+    }
+    @media (max-width: 780px) {
+      font-size: 26px;
+    }
+    @media (max-width: 520px) {
+      font-size: 24px;
+    }
+    @include r($phone) {
+      font-size: 22px;
+    }
 
     &:hover {
       color: #2c2c3c;
@@ -100,6 +133,18 @@
     display: grid;
     grid-gap: 8px;
     grid-template-columns: repeat(5, 1fr);
+    @media (max-width: 1150px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 945px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 660px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 390px) {
+      margin: 0 -8px;
+    }
   }
 
   &__not-found {

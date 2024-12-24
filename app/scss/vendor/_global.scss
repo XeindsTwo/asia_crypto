@@ -31,6 +31,7 @@
   color: #2C2C3C;
   background-color: #F1F1F5;
   position: relative;
+  overflow-x: hidden;
 
   &::before {
     @include pseudo;

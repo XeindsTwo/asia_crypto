@@ -8,6 +8,39 @@
     font-size: 88px;
     line-height: .85;
     letter-spacing: -3.52px;
+    @media (max-width: 1300px) {
+      font-size: 84px;
+    }
+    @include r($desktop) {
+      font-size: 78px;
+    }
+    @include r($lg) {
+      font-size: 72px;
+      letter-spacing: -3px;
+    }
+    @media (max-width: 920px) {
+      font-size: 68px;
+      letter-spacing: -2.8px;
+    }
+    @include r($tablet) {
+      font-size: 64px;
+      letter-spacing: -2.4px;
+    }
+    @include r($sm) {
+      font-size: 60px;
+      letter-spacing: -2px;
+    }
+    @media (max-width: 530px) {
+      font-size: 56px;
+      letter-spacing: -1.6px;
+    }
+    @include r($phone) {
+      font-size: 52px;
+      letter-spacing: -1.3px;
+    }
+    @media (max-width: 390px) {
+      font-size: 50px;
+    }
 
     span {
       color: rgba(#2C2C3C, .3);
