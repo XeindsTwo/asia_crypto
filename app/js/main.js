@@ -53,3 +53,9 @@ document.querySelectorAll(".desktop").forEach(link => {
     }
   });
 });*/
+
+new Swiper('.leading__swiper', {
+  speed: 900,
+  spaceBetween: 10,
+  slidesPerView: 'auto'
+})
