@@ -1,5 +1,8 @@
 .influencers {
   position: relative;
+  @include r($sm) {
+    margin-bottom: 60px;
+  }
 
   &__title {
     margin-bottom: 56px;
@@ -165,5 +168,8 @@
     height: 1px;
     width: 94%;
     background-color: #cccccc;
+    @media (max-width: 530px) {
+      margin-bottom: 55px;
+    }
   }
 }

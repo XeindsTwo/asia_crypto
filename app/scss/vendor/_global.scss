@@ -70,6 +70,18 @@
 
 .indent {
   margin-bottom: 150px;
+  @media (max-width: 1100px) {
+    margin-bottom: 120px;
+  }
+  @include r($lg) {
+    margin-bottom: 110px;
+  }
+  @include r($tablet) {
+    margin-bottom: 95px;
+  }
+  @include r($sm) {
+    margin-bottom: 80px;
+  }
 }
 
 .sr-only {
