@@ -3,6 +3,17 @@
     max-width: 305px;
     text-align: center;
     margin: 0 auto 30px;
+    @include r($tablet) {
+      line-height: 1.05;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 530px) {
+      font-size: 34px;
+    }
+    @include r($phone) {
+      margin-bottom: 50px;
+    }
   }
 
   &__tabs {
@@ -10,6 +21,21 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 64px;
+    @include r($tablet) {
+      margin-bottom: 48px;
+    }
+    @media (max-width: 610px) {
+      max-width: 420px;
+      margin: 0 auto 48px;
+    }
+    @media (max-width: 520px) {
+      max-width: 390px;
+      margin: 0 auto 40px;
+    }
+    @include r($phone) {
+      max-width: 370px;
+      margin: 0 auto 35px;
+    }
   }
 
   &__tab {
@@ -24,6 +50,21 @@
     border-radius: 5px;
     border: 2px solid transparent;
     transition: color .4s, border .4s, background-color .4s;
+    @include r($desktop) {
+      font-size: 36px;
+    }
+    @include r($lg) {
+      font-size: 32px;
+    }
+    @media (max-width: 900px) {
+      font-size: 30px;
+    }
+    @media (max-width: 780px) {
+      font-size: 26px;
+    }
+    @media (max-width: 520px) {
+      font-size: 24px;
+    }
 
     &:hover {
       color: #2c2c3c;
@@ -87,6 +128,11 @@
     align-items: center;
     grid-gap: 10px;
     margin: 0 auto;
+    @media (max-width: 660px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 390px;
+      margin: 0 auto;
+    }
   }
 
   &__decor {
@@ -98,5 +144,47 @@
     height: 1px;
     width: 94%;
     background-color: #cccccc;
+  }
+
+  .tariff-card {
+    &__head {
+      @include r($tablet) {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+
+      img {
+        @media (max-width: 915px) {
+          width: 185px;
+          height: 185px;
+        }
+        @media (max-width: 860px) {
+          width: 175px;
+          height: 175px;
+        }
+        @include r($tablet) {
+          width: 185px;
+          height: 185px;
+        }
+        @media (max-width: 680px) {
+          width: 175px;
+          height: 175px;
+        }
+        @media (max-width: 660px) {
+          width: 185px;
+          height: 185px;
+        }
+      }
+    }
+
+    &__name {
+      @media (max-width: 915px) {
+        font-size: 36px;
+      }
+      @media (max-width: 860px) {
+        font-size: 34px;
+      }
+    }
   }
 }

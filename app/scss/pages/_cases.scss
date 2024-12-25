@@ -1,15 +1,30 @@
 .cases {
   margin-bottom: 120px;
   position: relative;
+  @include r($tablet) {
+    margin-bottom: 100px;
+  }
 
   &__title {
     margin-bottom: 56px;
+    @include r($phone) {
+      margin-bottom: 46px;
+    }
   }
 
   &__tabs {
     @include flex-align-center(10);
     flex-wrap: wrap;
     margin-bottom: 64px;
+    @include r($desktop) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 860px) {
+      margin-bottom: 40px;
+    }
+    @include r($phone) {
+      margin-bottom: 30px;
+    }
   }
 
   &__tab {
@@ -24,6 +39,24 @@
     border-radius: 5px;
     border: 2px solid transparent;
     transition: color .4s, border .4s, background-color .4s;
+    @include r($desktop) {
+      font-size: 36px;
+    }
+    @include r($lg) {
+      font-size: 32px;
+    }
+    @media (max-width: 900px) {
+      font-size: 30px;
+    }
+    @media (max-width: 780px) {
+      font-size: 26px;
+    }
+    @media (max-width: 520px) {
+      font-size: 24px;
+    }
+    @include r($phone) {
+      font-size: 22px;
+    }
 
     &:hover {
       color: #2c2c3c;
@@ -62,6 +95,18 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(5, 1fr);
+    @include r($desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include r($lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 660px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include r($phone) {
+      margin: 0 -5px;
+    }
   }
 
   &__card {
@@ -71,6 +116,15 @@
     border-radius: 16px;
     background: #FBFBFB;
     box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
+    @include r($desktop) {
+      min-height: 310px;
+    }
+    @include r($lg) {
+      min-height: 300px;
+    }
+    @media(max-width: 660px) {
+      min-height: 280px;
+    }
   }
 
   &__head {
@@ -79,8 +133,17 @@
     font-family: $jetBrainsMono;
     text-transform: uppercase;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.25;
     letter-spacing: -0.15px;
+    @media (max-width: 690px) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 26px;
+    }
+    @include r($phone) {
+      font-size: 13px;
+    }
 
     img {
       height: auto;
@@ -94,10 +157,32 @@
     font-weight: 400;
     word-break: break-word;
     margin-bottom: 60px;
+    @include r($desktop) {
+      font-size: 36px;
+    }
+    @media (max-width: 1070px) {
+      font-size: 32px;
+    }
+    @include r($lg) {
+      font-size: 30px;
+    }
+    @include r($tablet) {
+      font-size: 28px;
+    }
+    @include r($phone) {
+      font-size: 26px;
+    }
+    @media (max-width: 400px) {
+      font-size: 24px;
+    }
   }
 
   &__link {
     margin-top: auto;
+    @include r($phone) {
+      font-size: 13px;
+      padding: 13px 18px;
+    }
 
     &:hover {
       background-color: transparent;
@@ -112,6 +197,9 @@
     color: #86202c;
     text-transform: uppercase;
     font-family: $jetBrainsMono;
+    @include r($tablet) {
+      font-size: 15px;
+    }
   }
 
   &__more {
