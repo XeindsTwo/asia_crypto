@@ -2,10 +2,30 @@
   &__content {
     max-width: 495px;
     margin: -44px auto 120px;
+    @media (max-width: 992px) {
+      margin: 42px 0 110px;
+    }
+    @include r($sm) {
+      margin-top: 52px;
+    }
+    @media (max-width: 520px) {
+      margin-bottom: 90px;
+    }
   }
 
   &__title {
     margin-bottom: 56px;
+    @include r($desktop) {
+      max-width: 450px;
+    }
+    @include r($lg) {
+      max-width: 100%;
+      margin-bottom: 46px;
+    }
+    @media (max-width: 390px) {
+      font-size: 48px;
+      margin-bottom: 36px;
+    }
   }
 
   &__text {
