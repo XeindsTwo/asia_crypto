@@ -5,6 +5,13 @@
   padding-top: 56px;
   overflow-y: hidden;
   max-height: 680px;
+  @include r($lg) {
+    padding-top: 48px;
+  }
+  @include r($tablet) {
+    max-height: 580px;
+    overflow-x: hidden;
+  }
 
   &__inner {
     display: flex;
@@ -15,10 +22,32 @@
   &__content {
     max-width: 310px;
     margin-top: 96px;
+    @include r($desktop) {
+      margin-top: 76px;
+    }
+    @media (max-width: 1100px) {
+      margin-top: 66px;
+    }
+    @include r($lg) {
+      margin-top: 56px;
+      max-width: 320px;
+    }
+    @media (max-width: 880px) {
+      max-width: 290px;
+    }
+    @include r($tablet) {
+      margin-top: 46px;
+    }
   }
 
   &__title {
     margin-bottom: 56px;
+    @include r($desktop) {
+      margin-bottom: 40px;
+    }
+    @include r($tablet) {
+      font-size: 42px;
+    }
   }
 
   &__text {
@@ -33,5 +62,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 540px;
+    }
+    @include r($tablet) {
+      margin-right: -50px;
+    }
   }
 }

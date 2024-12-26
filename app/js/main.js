@@ -55,7 +55,11 @@ document.querySelectorAll(".desktop").forEach(link => {
 });*/
 
 new Swiper('.leading__swiper', {
-  speed: 900,
+  speed: 800,
   spaceBetween: 10,
-  slidesPerView: 'auto'
+  slidesPerView: 'auto',
+  scrollbar: {
+    el: '.leading__swiper-scrollbar',
+    draggable: true
+  }
 })
