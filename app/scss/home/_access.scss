@@ -9,14 +9,21 @@
     padding-top: 48px;
   }
   @include r($tablet) {
-    max-height: 580px;
+    max-height: 620px;
+    border-radius: 18px;
     overflow-x: hidden;
+  }
+  @media (max-width: 680px) {
+    max-height: 480px;
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: 680px) {
+
+    }
   }
 
   &__content {
@@ -38,6 +45,12 @@
     @include r($tablet) {
       margin-top: 46px;
     }
+    @media (max-width: 710px) {
+      max-width: 266px;
+    }
+    @media (max-width: 680px) {
+      margin-top: 35px;
+    }
   }
 
   &__title {
@@ -47,6 +60,9 @@
     }
     @include r($tablet) {
       font-size: 42px;
+    }
+    @media (max-width: 710px) {
+      font-size: 40px;
     }
   }
 
@@ -68,6 +84,17 @@
     }
     @include r($tablet) {
       margin-right: -50px;
+    }
+    @media (max-width: 720px) {
+      margin-right: -70px;
+    }
+    @media (max-width: 680px) {
+      margin-right: -180px;
+      max-width: 900px;
+      width: 100%;
+    }
+    @media (max-width: 580px) {
+
     }
   }
 }
