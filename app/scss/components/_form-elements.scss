@@ -20,8 +20,9 @@
   background-color: transparent;
   border-bottom: 1px solid rgba(#2C2C3C, .24);
   transition: background-color .4s, color .4s, border .4s;
-  @include r($tablet) {
-    padding: 22px 18px;
+  @include r($phone) {
+    font-size: 17px;
+    padding: 13px 0 11px;
   }
 
   &:hover {

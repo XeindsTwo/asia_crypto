@@ -16,13 +16,20 @@
   @media (max-width: 680px) {
     max-height: 480px;
   }
+  @media (max-width: 500px) {
+    padding-top: 39px;
+  }
+  @include r($phone) {
+    max-height: 673px;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    @media (max-width: 680px) {
-
+    @include r($phone) {
+      gap: 20px;
+      flex-direction: column;
     }
   }
 
@@ -51,6 +58,14 @@
     @media (max-width: 680px) {
       margin-top: 35px;
     }
+    @media (max-width: 500px) {
+      margin-top: 30px;
+    }
+    @include r($phone) {
+      max-width: 320px;
+      margin: 0 auto 25px;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -64,12 +79,25 @@
     @media (max-width: 710px) {
       font-size: 40px;
     }
+    @include r($phone) {
+      letter-spacing: -0.6px;
+      max-width: 270px;
+    }
   }
 
   &__text {
     margin-bottom: 32px;
     line-height: 1.2;
     max-width: 270px;
+    @include r($phone) {
+      margin: 0 auto 28px;
+    }
+  }
+
+  &__link {
+    @include r($phone) {
+      margin: 0 auto;
+    }
   }
 
   &__list {
@@ -93,8 +121,13 @@
       max-width: 900px;
       width: 100%;
     }
-    @media (max-width: 580px) {
-
+    @media (max-width: 590px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 280px;
+      margin-right: -80px;
+    }
+    @include r($phone) {
+      margin: 0 auto;
     }
   }
 }

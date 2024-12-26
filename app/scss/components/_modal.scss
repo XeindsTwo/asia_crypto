@@ -12,6 +12,13 @@
   box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
   transform: translate(-50%, -25%);
   transition: transform .45s ease-in-out, visibility .4s, opacity .4s;
+  @media (max-width: 800px) {
+    padding-top: 30px;
+  }
+  @media (max-width: 415px) {
+    width: 95%;
+    padding: 35px 20px 26px;
+  }
 
   &.active {
     transform: translate(-50%, -50%);
@@ -32,10 +39,24 @@
     background-color: #F7F7F8;
     box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
     transition: border .4s, background-color .4s;
+    @include r($phone) {
+      top: -18px;
+      right: -20px;
+      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .36);
+    }
+    @media (max-width: 415px) {
+      right: 9px;
+      top: 8px;
+      background-color: #F6F6F6;
+      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .46);
+    }
 
     &:hover {
       border-color: #D02138;
       background-color: transparent;
+      @include r($phone) {
+        background-color: #D02138;
+      }
 
       svg path {
         fill: $white;
@@ -57,16 +78,40 @@
     font-weight: 400;
     font-size: 40px;
     margin-bottom: 12px;
+    @media (max-width: 800px) {
+      font-size: 38px;
+    }
+    @include r($sm) {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 530px) {
+      font-size: 34px;
+    }
+    @media (max-width: 415px) {
+      font-size: 32px;
+    }
   }
 
   &__subtext {
     color: #2C2C3C;
     font-size: 18px;
     margin-bottom: 32px;
+    @include r($phone) {
+      margin-bottom: 28px;
+      font-size: 17px;
+      max-width: 240px;
+    }
   }
 
   &__fields {
     @include flex-column(8);
     margin-bottom: 32px;
+  }
+
+  .btn {
+    @include r($phone) {
+      font-size: 13px;
+    }
   }
 }
