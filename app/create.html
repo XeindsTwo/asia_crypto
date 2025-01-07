@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="theme-color" content="#fff">
+  <title>Asia Crypto | Управление инфлюенсерами</title>
+  <link rel="shortcut icon" href="../../images/icons/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../../css/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+</head>
+<body class="body">
+<main>
+  <section class="admin">
+    <div class="container">
+      <a class="authorization__link admin" href="/">
+        <img src="../../images/logo.svg" alt="logo">
+      </a>
+      <h3 class="admin__subtitle" style="margin-top: 60px">Добавление инфлюенсера</h3>
+      <form class="create-influencers" id="createReferenceForm" enctype="multipart/form-data">
+        <ul class="create-influencers__list">
+          <li>
+            <label class="label" for="name">Название:</label>
+            <input class="input input--admin" type="text" id="name" name="name" maxlength="255" required="">
+          </li>
+          <li>
+            <label class="label" for="followers_count">Количество подписчиков:</label>
+            <input class="input input--admin" type="text" id="followers_count" name="followers_count" maxlength="255"
+                   required="">
+          </li>
+          <li>
+            <label class="label" for="geo">Геопозиция:</label>
+            <input class="input input--admin" type="text" id="geo" name="geo" maxlength="255" required="">
+          </li>
+          <li>
+            <label class="label" for="link_url">Ссылка на аккаунт:</label>
+            <input class="input input--admin" type="url" id="link_url" name="link_url" maxlength="255" required="">
+          </li>
+          <li>
+            <label class="label" for="image">Изображение:</label>
+            <input class="input input--admin" type="file" id="image" name="image" accept=".jpg, .jpeg, .png, .webp"
+                   required="">
+          </li>
+          <li>
+            <label class="label" for="platform">Платформа:</label>
+            <div class="choices" data-type="select-one" tabindex="0" role="combobox" aria-autocomplete="list"
+                 aria-haspopup="true" aria-expanded="false">
+              <div class="choices__inner"><select id="platform" name="platform" class="choices__input" hidden=""
+                                                  tabindex="-1" data-choice="active">
+                <option value="YouTube" selected="">Youtube</option>
+                <option value="Telegram">Telegram</option>
+                <option value="Twitter">Twitter</option>
+              </select>
+                <div class="choices__list choices__list--single" role="listbox">
+                  <div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="YouTube"
+                       aria-selected="true" role="option">Youtube
+                  </div>
+                </div>
+              </div>
+              <div class="choices__list choices__list--dropdown" aria-expanded="false"><input type="search"
+                                                                                              class="choices__input choices__input--cloned"
+                                                                                              autocomplete="off"
+                                                                                              autocapitalize="off"
+                                                                                              spellcheck="false"
+                                                                                              role="textbox"
+                                                                                              aria-autocomplete="list"
+                                                                                              aria-label="Платформа:"
+                                                                                              placeholder="">
+                <div class="choices__list" role="listbox">
+                  <div id="choices--platform-item-choice-2"
+                       class="choices__item choices__item--choice choices__item--selectable is-highlighted"
+                       role="option" data-choice="" data-id="2" data-value="Telegram" data-select-text="Press to select"
+                       data-choice-selectable="" aria-selected="true">Telegram
+                  </div>
+                  <div id="choices--platform-item-choice-3"
+                       class="choices__item choices__item--choice choices__item--selectable" role="option"
+                       data-choice="" data-id="3" data-value="Twitter" data-select-text="Press to select"
+                       data-choice-selectable="">Twitter
+                  </div>
+                  <div id="choices--platform-item-choice-1"
+                       class="choices__item choices__item--choice is-selected choices__item--selectable" role="option"
+                       data-choice="" data-id="1" data-value="YouTube" data-select-text="Press to select"
+                       data-choice-selectable="">Youtube
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="create-influencers__countries">
+          <span class="create-influencers__subtitle">Топ 5 стран + процентное соотношение</span>
+          <ul class="create-influencers__countries-list">
+            <li class="create-influencers__countries-item">
+              <div class="link-item__left">
+                <label class="label" for="country_1">1 страна:</label>
+                <select class="input input--admin" style="appearance: auto" name="country_1" id="country_1" required>
+                  <?php
+                  if (!empty($countries)) {
+                    foreach ($countries as $country) {
+                      $id = htmlspecialchars($country['id']);
+                      $name = htmlspecialchars($country['name']);
+                      echo "<option value=\"$id\">$name</option>";
+                  }
+                  } else {
+                  echo '<option value="">No countries available</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+              <div class="link-item__left">
+                <label class="label" for="popularity_percent_1">Процент 1 страны:</label>
+                <input class="input input--admin" type="number" name="popularity_percent_1" id="popularity_percent_1" step="0.01" min="0" max="100" required>
+              </div>
+            </li>
+            <li class="create-influencers__countries-item">
+              <div class="link-item__left">
+                <label class="label" for="country_2">2 страна:</label>
+                <select class="input input--admin" style="appearance: auto" name="country_2" id="country_2" required>
+                  <?php
+                  if (!empty($countries)) {
+                    foreach ($countries as $country) {
+                      $id = htmlspecialchars($country['id']);
+                      $name = htmlspecialchars($country['name']);
+                      echo "<option value=\"$id\">$name</option>";
+                  }
+                  } else {
+                  echo '<option value="">No countries available</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+              <div class="link-item__left">
+                <label class="label" for="popularity_percent_2">Процент 2 страны:</label>
+                <input class="input input--admin" type="number" name="popularity_percent_2" id="popularity_percent_2" step="0.01" min="0" max="100" required>
+              </div>
+            </li>
+            <li class="create-influencers__countries-item">
+              <div class="link-item__left">
+                <label class="label" for="country_3">3 страна:</label>
+                <select class="input input--admin" style="appearance: auto" name="country_3" id="country_3" required>
+                  <?php
+                  if (!empty($countries)) {
+                    foreach ($countries as $country) {
+                      $id = htmlspecialchars($country['id']);
+                      $name = htmlspecialchars($country['name']);
+                      echo "<option value=\"$id\">$name</option>";
+                  }
+                  } else {
+                  echo '<option value="">No countries available</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+              <div class="link-item__left">
+                <label class="label" for="popularity_percent_3">Процент 3 страны:</label>
+                <input class="input input--admin" type="number" name="popularity_percent_3" id="popularity_percent_3" step="0.01" min="0" max="100" required>
+              </div>
+            </li>
+            <li class="create-influencers__countries-item">
+              <div class="link-item__left">
+                <label class="label" for="country_4">4 страна:</label>
+                <select class="input input--admin" style="appearance: auto" name="country_4" id="country_4" required>
+                  <?php
+                  if (!empty($countries)) {
+                    foreach ($countries as $country) {
+                      $id = htmlspecialchars($country['id']);
+                      $name = htmlspecialchars($country['name']);
+                      echo "<option value=\"$id\">$name</option>";
+                  }
+                  } else {
+                  echo '<option value="">No countries available</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+              <div class="link-item__left">
+                <label class="label" for="popularity_percent_4">Процент 4 страны:</label>
+                <input class="input input--admin" type="number" name="popularity_percent_4" id="popularity_percent_4" step="0.01" min="0" max="100" required>
+              </div>
+            </li>
+            <li class="create-influencers__countries-item">
+              <div class="link-item__left">
+                <label class="label" for="country_5">5 страна:</label>
+                <select class="input input--admin" style="appearance: auto" name="country_5" id="country_5" required>
+                  <?php
+                  if (!empty($countries)) {
+                    foreach ($countries as $country) {
+                      $id = htmlspecialchars($country['id']);
+                      $name = htmlspecialchars($country['name']);
+                      echo "<option value=\"$id\">$name</option>";
+                  }
+                  } else {
+                  echo '<option value="">No countries available</option>';
+                  }
+                  ?>
+                </select>
+              </div>
+              <div class="link-item__left">
+                <label class="label" for="popularity_percent_5">Процент 5 страны:</label>
+                <input class="input input--admin" type="number" name="popularity_percent_5" id="popularity_percent_5" step="0.01" min="0" max="100" required>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="create-influencers__demography">
+          <span class="create-influencers__subtitle">Демография (процентное соотношение)</span>
+          <div class="create-influencers__demography-list">
+            <div class="link-item__left">
+              <label class="label" for="age_18_24_percent">18-24 года:</label>
+              <input class="input input--admin" type="text" name="age_18_24_percent" id="age_18_24_percent"
+                     required="">
+            </div>
+            <div class="link-item__left">
+              <label class="label" for="age_25_34_percent">25-34 года:</label>
+              <input class="input input--admin" type="text" name="age_25_34_percent" id="age_25_34_percent"
+                     required="">
+            </div>
+            <div class="link-item__left">
+              <label class="label" for="age_35_44_percent">35-44 лет:</label>
+              <input class="input input--admin" type="text" name="age_35_44_percent" id="age_35_44_percent"
+                     required="">
+            </div>
+            <div class="link-item__left">
+              <label class="label" for="male_percent">Мужской пол:</label>
+              <input class="input input--admin" type="text" name="male_percent" id="male_percent" required="">
+            </div>
+            <div class="link-item__left">
+              <label class="label" for="female_percent">Женский пол:</label>
+              <input class="input input--admin" type="text" name="female_percent" id="female_percent" required="">
+            </div>
+          </div>
+        </div>
+        <button class="btn" style="margin-top: 30px" type="submit">Создать референс</button>
+      </form>
+    </div>
+  </section>
+</main>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+<script>
+  new Cleave('#followers_count', {
+    numeral: true,
+    numeralThousandsGroupStyle: 'thousand'
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const element = document.getElementById('platform');
+    new Choices(element, {
+      placeholder: true
+    });
+
+    const elementsCountries = document.querySelectorAll('select[id^="country_"]');
+
+    elementsCountries.forEach(element => {
+      new Choices(element, {
+        placeholder: true,
+        searchEnabled: true,
+        itemSelectText: '',
+      });
+    });
+  });
+
+  document.querySelector('.modal__admin-links').addEventListener('click', function (e) {
+    if (e.target.classList.contains('link-item__delete')) {
+      const linkItem = e.target.closest('.link-item');
+      linkItem.remove();
+      const linkItems = document.querySelectorAll('.link-item');
+      if (linkItems.length < 10) {
+        document.getElementById('addLinkBtn').disabled = false;
+      }
+    }
+  });
+
+  document.getElementById('createReferenceForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    fetch('create_influencer.php', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.json())
+      .then(data => {
+        let backgroundColor;
+        switch (data.status) {
+          case 'success':
+            backgroundColor = 'green';
+            break;
+          case 'error':
+            backgroundColor = 'red';
+            break;
+        }
+        Toastify({
+          text: data.message,
+          duration: 3000,
+          backgroundColor: backgroundColor,
+          gravity: 'top',
+          position: 'right'
+        }).showToast();
+        if (data.status === 'success') {
+          setTimeout(() => {
+            document.getElementById('createReferenceForm').reset();
+            document.querySelectorAll('.link-item:not(:first-child)').forEach(item => item.remove());
+          }, 250);
+        }
+      })
+      .catch(error => {
+        Toastify({
+          text: 'Произошла ошибка при создании референса',
+          duration: 3000,
+          backgroundColor: 'red',
+          gravity: 'top',
+          position: 'right'
+        }).showToast();
+        console.error('Ошибка:', error);
+      });
+  });
+</script>
+</body>
+</html>

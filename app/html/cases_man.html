@@ -1,0 +1,48 @@
+@include('components/_head.html', {
+title: 'Asia Crypto | Админ-панель'
+})
+
+<body class="body">
+<main>
+  <section class="admin">
+    <div class="container">
+      <a class="authorization__link admin" href="/php/">
+        <img src="../../images/logo.svg" width="120" height="21" alt="logo">
+      </a>
+      <h3 class="admin__subtitle" style="margin-top: 60px">Управление категориями кейсов</h3>
+      <div class="admin__buttons">
+        <a class="btn btn--gray" href="/php/">Вернуться назад</a>
+        <a class="btn" href="categories/create.php">Создать категорию</a>
+      </div>
+
+      <ul id="sortable" class="categories-list">
+        <li class="categories-list__item" id="category-9" data-id="9">
+          <p class="categories-list__name">Gaming Tokens</p>
+          <div class="categories-list__actions">
+            <a class="btn btn--gray" href="show.php?id=9">Посмотреть кейсы</a>
+            <a class="btn" href="categories/edit.php?id=9">Редактировать</a>
+            <button class="btn btn--red delete-btn" data-id="9">Удалить</button>
+          </div>
+        </li>
+        <li class="categories-list__item" id="category-8" data-id="8">
+          <p class="categories-list__name">DeFi Projects</p>
+          <div class="categories-list__actions">
+            <a class="btn btn--gray" href="show.php?id=8">Посмотреть кейсы</a>
+            <a class="btn" href="categories/edit.php?id=8">Редактировать</a>
+            <button class="btn btn--red delete-btn" data-id="8">Удалить</button>
+          </div>
+        </li>
+        <li class="categories-list__item" id="category-6" data-id="6">
+          <p class="categories-list__name">Meme Coins</p>
+          <div class="categories-list__actions">
+            <a class="btn btn--gray" href="show.php?id=6">Посмотреть кейсы</a>
+            <a class="btn" href="categories/edit.php?id=6">Редактировать</a>
+            <button class="btn btn--red delete-btn" data-id="6">Удалить</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>

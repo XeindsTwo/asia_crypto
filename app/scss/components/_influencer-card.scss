@@ -25,9 +25,18 @@
       top: -4px;
       left: -4px;
     }
+
+    &.not {
+      &::before {
+        display: none;
+      }
+    }
   }
 
   &__avatar {
+    @include objectCoverBg;
+    border-radius: 50%;
+
     @include r($lg) {
       width: 115px;
       height: 115px;
@@ -137,6 +146,21 @@
     @include r($tablet) {
       flex-direction: column;
       width: 100%;
+    }
+
+    &.admin {
+      margin: 20px 0 0;
+      flex-wrap: wrap;
+      @include r($tablet) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      & .btn {
+        @include r($sm) {
+          font-size: 13px;
+        }
+      }
     }
   }
 

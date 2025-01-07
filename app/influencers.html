@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta http-equiv="content-type" content="public, max-age=3600">
-  <meta name="theme-color" content="#fff"/>
   <title>Asia Crypto | influencers</title>
   <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 
-<body class="body">
+<body class="body modal-active">
 <header class="header" id="header">
   <div class="container">
     <div class="header__inner">
@@ -69,7 +68,7 @@
             <a class="header__link" href="pricing.html">Plans</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="whitepaper.html">
+            <a class="header__link" href="verification.html">
               Verification
             </a>
           </li>
@@ -123,7 +122,7 @@
           <a class="header__link" href="pricing.html">Plans</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="whitepaper.html">
+          <a class="header__link" href="verification.html">
             Verification
           </a>
         </li>
@@ -827,6 +826,84 @@
   </div>
 </section>
 </main>
+<div class="modal__wrapper">
+  <div class="modal active" id="modal-statistics">
+    <button class="modal__close" type="button">
+      <span class="sr-only">Close Modal Windows</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10.0003 8.70383L14.5374 4.16675L15.8337 5.46305L11.2966 10.0001L15.8337 14.5371L14.5374 15.8334L10.0003 11.2964L5.46329 15.8334L4.16699 14.5371L8.70403 10.0001L4.16699 5.46305L5.46329 4.16675L10.0003 8.70383Z" fill="#2C2C3C"></path>
+      </svg>
+    </button>
+    <div class="modal__top">
+      <h3 class="modal__title" id="name_influencer">
+        Name Channel
+        <span>Statistics</span>
+      </h3>
+    </div>
+    <div class="modal__content">
+      <ul class="modal__countries">
+        <li class="modal__country">
+          <p class="modal__country-name">
+            <span class="fi fi-us"></span>
+            United States
+          </p>
+          <span class="modal__percent">% 15.30</span>
+        </li>
+        <li class="modal__country">
+          <p class="modal__country-name">
+            <span class="fi fi-es"></span>
+            Spain
+          </p>
+          <span class="modal__percent">% 12.70</span>
+        </li>
+        <li class="modal__country">
+          <p class="modal__country-name">
+            <span class="fi fi-gb"></span>
+            United Kingdom
+          </p>
+          <span class="modal__percent">% 10.20</span>
+        </li>
+        <li class="modal__country">
+          <p class="modal__country-name">
+            <span class="fi fi-ir"></span>
+            Iran
+          </p>
+          <span class="modal__percent">% 8.20</span>
+        </li>
+        <li class="modal__country">
+          <p class="modal__country-name">
+            <span class="fi fi-de"></span>
+            Germany
+          </p>
+          <span class="modal__percent">% 6.30</span>
+        </li>
+      </ul>
+      <ul class="modal__ages">
+        <li class="modal__age">
+          <span class="modal__age-name">Age 18-24</span>
+          <span class="modal__percent" id="age_18_24">% 50.00</span>
+        </li>
+        <li class="modal__age">
+          <span class="modal__age-name">Age 25-34</span>
+          <span class="modal__percent" id="age_25_34">% 2.00</span>
+        </li>
+        <li class="modal__age">
+          <span class="modal__age-name">Age 35-44</span>
+          <span class="modal__percent" id="age_35_44">% 3.00</span>
+        </li>
+        <li class="modal__age">
+          <span class="modal__age-name">Male</span>
+          <span class="modal__percent" id="age_male">% 30.00</span>
+        </li>
+        <li class="modal__age">
+          <span class="modal__age-name">Female</span>
+          <span class="modal__percent" id="age_female">% 30.00</span>
+        </li>
+      </ul>
+      <a class="btn" href="" id="link_influencer" target="_blank">Go to account</a>
+    </div>
+  </div>
+</div>
 <footer class="footer" id="community">
   <div class="container">
     <div class="footer__top">
@@ -910,6 +987,10 @@
       <p class="footer__copy">
         Your Trusted Partner in Crypto Promotion
       </p>
+    </div>
+    <div class="footer__documents">
+      <a class="footer__document" href="terms.html">Terms of Service</a>
+      <a class="footer__document" href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>

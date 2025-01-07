@@ -2,6 +2,7 @@
   @include topLeft50;
   position: fixed;
   max-width: 360px;
+  max-height: 90vh;
   width: 96%;
   padding: 40px 24px;
   opacity: 0;
@@ -18,6 +19,14 @@
   @media (max-width: 415px) {
     width: 95%;
     padding: 35px 20px 26px;
+  }
+  @media (max-height: 680px) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 
   &.active {
@@ -47,6 +56,15 @@
     @media (max-width: 415px) {
       right: 9px;
       top: 8px;
+      background-color: #F6F6F6;
+      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .46);
+    }
+    @media (max-height: 710px) {
+      top: -20px;
+    }
+    @media (max-height: 680px) {
+      top: 8px;
+      right: 8px;
       background-color: #F6F6F6;
       box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .46);
     }
@@ -91,6 +109,10 @@
     @media (max-width: 415px) {
       font-size: 32px;
     }
+
+    span {
+      color: rgba(#2c2c3c, .3);
+    }
   }
 
   &__subtext {
@@ -113,5 +135,49 @@
     @include r($phone) {
       font-size: 13px;
     }
+  }
+
+  &__top {
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    font-family: $jetBrainsMono;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(#4D4D5A, .56);
+  }
+
+  &__countries, &__ages {
+    border-top: 1px solid #e5e5ea;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__ages {
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  &__country, &__age {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+  }
+
+  &__percent {
+    font-size: 16px;
+    font-weight: 600;
+    color: #292524;
+    font-family: $rfDevi;
+  }
+
+  .fi {
+    width: 1.1em;
+    line-height: 1;
   }
 }

@@ -1,0 +1,42 @@
+.categories-list {
+  margin-top: 60px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 930px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include r($sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__item {
+    cursor: grab;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #86202c;
+    @include r($lg) {
+      padding: 18px 16px;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    @media (max-width: 930px) {
+      max-width: 270px;
+    }
+
+    .btn {
+      @include r($lg) {
+        font-size: 13px;
+      }
+    }
+  }
+}

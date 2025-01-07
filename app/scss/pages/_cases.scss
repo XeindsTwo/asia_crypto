@@ -149,6 +149,13 @@
       height: auto;
       width: 14px;
     }
+
+    &.admin {
+      @media (max-width: 690px) {
+        align-items: center;
+        gap: 12px;
+      }
+    }
   }
 
   &__name {
@@ -197,8 +204,15 @@
     color: #86202c;
     text-transform: uppercase;
     font-family: $jetBrainsMono;
+    @include r($desktop) {
+      margin-top: 65px;
+    }
     @include r($tablet) {
+      margin-top: 55px;
       font-size: 15px;
+    }
+    @include r($phone) {
+      font-size: 14px;
     }
   }
 
@@ -218,6 +232,15 @@
     &-btn {
       background-color: #FBFBFB;
       border-color: rgba(#000, .15);
+    }
+  }
+
+  &__form {
+    margin-top: 60px;
+    max-width: 500px;
+
+    &-field {
+      margin-bottom: 25px;
     }
   }
 }

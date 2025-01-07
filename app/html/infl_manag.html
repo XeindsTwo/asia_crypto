@@ -1,0 +1,105 @@
+@include('components/_head.html', {
+title: 'Asia Crypto | Админ-панель'
+})
+
+<body class="body">
+<main>
+  <section class="admin">
+    <div class="container">
+      <a class="authorization__link admin" href="/php/">
+        <img src="../../images/logo.svg" width="120" height="21" alt="logo">
+      </a>
+      <h3 class="admin__subtitle" style="margin-top: 60px">Кейсы категории
+        "Gaming Tokens"</h3>
+      <div class="admin__buttons">
+        <a class="btn btn--gray" href="/php/cases/">Вернуться назад</a>
+        <a class="btn" href="actions/create.php/?id=9">Создать кейс</a>
+      </div>
+
+      <ul id="sortable" class="admin__list-influencers">
+        <li class="influencer-card" style="cursor: pointer" data-case-id="21" data-order="1">
+          <div class="cases__head admin" style="margin-bottom: 30px">
+            <img src="/../images/icons/chart.svg" width="11" height="10" alt="chart icon">
+            85 DOT / 25 DOT
+          </div>
+          <div class="influencer-card__head">
+            <img class="influencer-card__avatar" src="/php/uploads/cases/67736c03e81b4.webp" alt="Competition Based"
+                 width="108" height="108">
+          </div>
+          <div>
+            <h3 class="influencer-card__name">Competition Based</h3>
+            <div class="influencer-card__actions admin">
+              <a class="btn btn--gray" href="/cases/show/21" target="_blank">Read more</a>
+              <button class="btn delete-btn" type="button" data-id="21">
+                Удалить
+              </button>
+              <a class="btn" href="actions/edit.php?id=21">Редактировать</a>
+            </div>
+          </div>
+        </li>
+        <li class="influencer-card" style="cursor: pointer" data-case-id="32" data-order="2">
+          <div class="cases__head admin" style="margin-bottom: 30px">
+            <img src="/../images/icons/chart.svg" width="11" height="10" alt="chart icon">
+            вапвпа
+          </div>
+          <div class="influencer-card__head">
+            <img class="influencer-card__avatar" src="/php/uploads/cases/67740c26993db.webp" alt="апвапв" width="108"
+                 height="108">
+          </div>
+          <div>
+            <h3 class="influencer-card__name">апвапв</h3>
+            <div class="influencer-card__actions admin">
+              <a class="btn btn--gray" href="/cases/show/32" target="_blank">Read more</a>
+              <button class="btn delete-btn" type="button" data-id="32">
+                Удалить
+              </button>
+              <a class="btn" href="actions/edit.php?id=32">Редактировать</a>
+            </div>
+          </div>
+        </li>
+        <li class="influencer-card" style="cursor: pointer" data-case-id="17" data-order="3">
+          <div class="cases__head admin" style="margin-bottom: 30px">
+            <img src="/../images/icons/chart.svg" width="11" height="10" alt="chart icon">
+            85 DOT / 25 DOT
+          </div>
+          <div class="influencer-card__head">
+            <img class="influencer-card__avatar" src="/php/uploads/cases/6773638281dcb.webp" alt="Ethan Kim" width="108"
+                 height="108">
+          </div>
+          <div>
+            <h3 class="influencer-card__name">Ethan Kim</h3>
+            <div class="influencer-card__actions admin">
+              <a class="btn btn--gray" href="/cases/show/17" target="_blank">Read more</a>
+              <button class="btn delete-btn" type="button" data-id="17">
+                Удалить
+              </button>
+              <a class="btn" href="actions/edit.php?id=17">Редактировать</a>
+            </div>
+          </div>
+        </li>
+        <li class="influencer-card" style="cursor: pointer" data-case-id="17" data-order="3">
+          <div class="cases__head admin" style="margin-bottom: 30px">
+            <img src="/../images/icons/chart.svg" width="11" height="10" alt="chart icon">
+            85 DOT / 25 DOT
+          </div>
+          <div class="influencer-card__head">
+            <img class="influencer-card__avatar" src="/php/uploads/cases/6773638281dcb.webp" alt="Ethan Kim" width="108"
+                 height="108">
+          </div>
+          <div>
+            <h3 class="influencer-card__name">Ethan Kim</h3>
+            <div class="influencer-card__actions admin">
+              <a class="btn btn--gray" href="/cases/show/17" target="_blank">Read more</a>
+              <button class="btn delete-btn" type="button" data-id="17">
+                Удалить
+              </button>
+              <a class="btn" href="actions/edit.php?id=17">Редактировать</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>

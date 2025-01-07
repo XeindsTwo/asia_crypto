@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="html html--min-height" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Asia Crypto | Verification</title>
+  <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body body--height">
+<div class="wrapper">
+  @include('components/_header.html')
+  <main class="main">
+    <section class="verification indent">
+      <div class="container">
+        <div class="verification__inner">
+          <div>
+            <h1 class="verification__title title-section">Check for scammers Instantly.</h1>
+            <p class="verification__scammer">This influencer is flagged as a potential scammer</p>
+            <img class="verification__img okay" style="display: block" src="images/verif-ok.svg" width="375" height="375" alt="verification okay">
+            <img class="verification__img scam" src="images/verif-scam.svg" width="375" height="375" alt="verification scam">
+            <form class="verification__form" action="">
+              <label class="verification__label" for="data_input">Influencer Username or Handle</label>
+              <input
+                  class="input verification__input"
+                  type="text" required
+                  placeholder="Username or handle (e.g., @CryptoGuru)"
+                  maxlength="255" id="data_input" name="data_input"
+              >
+              <button class="btn" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @include('components/_footer.html')
+</div>
+@include('components/_modal-quote.html')
+@include('components/_modal-success.html')
+<script src="js/main.min.js" type="module"></script>
+</body>

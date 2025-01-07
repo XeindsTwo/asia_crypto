@@ -1,0 +1,24 @@
+@include('components/_head.html', {
+title: 'Asia Crypto | Админ-панель'
+})
+
+<body class="body">
+<main>
+  <section class="admin">
+    <div class="container">
+      <a class="authorization__link admin" href="/">
+        <img src="../images/logo.svg" width="120" height="21" alt="logo">
+      </a>
+      <h2 class="admin__title">Главная страница админ-панели</h2>
+      <a class="admin__logout" href="functions/logout.php?logout=1">Выйти из аккаунта</a>
+      <div class="admin__selectors">
+        <a class="admin__selector" href="/php/influencers/">Управление инфлюенсерами</a>
+        <a class="admin__selector" href="/php/cases/">Управление кейсами</a>
+        <a class="admin__selector" href="/php/users/">Управление пользователями</a>
+        <a class="admin__selector" href="/php/checker/">Управление чекером</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
