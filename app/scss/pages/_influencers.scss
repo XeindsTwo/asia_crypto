@@ -102,7 +102,6 @@
     &-btn {
       @include flex-align-center(4);
       font-weight: 700;
-      font-family: $jetBrainsMono;
       color: #4D4D5A;
       font-size: 14px;
       line-height: 1;
@@ -156,7 +155,6 @@
     text-align: center;
     color: #86202c;
     text-transform: uppercase;
-    font-family: $jetBrainsMono;
   }
 
   &__decor {

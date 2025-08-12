@@ -22,15 +22,19 @@
 }
 
 .body {
-  font-family: $foundersGrotesk;
+  font-family: $montserrat;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.24;
+  line-height: 1.4;
   letter-spacing: -0.18px;
-  color: #2C2C3C;
-  background-color: #F1F1F5;
+  color: #4A4A4A;
+  background: linear-gradient(90deg, #F7EFDC 0%, #F5EAD4 29.83%, #F1DDC0 74.95%, #EED4B1 100%);
   position: relative;
   overflow-x: hidden;
+
+  &--white {
+    background: #FFFFFF;
+  }
 
   &::before {
     @include pseudo;
@@ -61,26 +65,14 @@
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
   width: 100%;
 }
 
 .indent {
-  margin-bottom: 150px;
-  @media (max-width: 1100px) {
-    margin-bottom: 120px;
-  }
-  @include r($lg) {
-    margin-bottom: 110px;
-  }
-  @include r($tablet) {
-    margin-bottom: 95px;
-  }
-  @include r($sm) {
-    margin-bottom: 80px;
-  }
+  margin-bottom: 120px;
 }
 
 .sr-only {
@@ -94,18 +86,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(#86202c, .3);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #86202c;
 }
 
 ::selection {

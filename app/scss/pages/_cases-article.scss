@@ -8,22 +8,19 @@
   }
 
   &__content {
-    max-width: 495px;
-    margin: -28px auto 120px;
-    @media (max-width: 950px) {
-      margin: 42px auto 110px;
-    }
-    @include r($sm) {
-      margin-top: 62px;
-    }
+    max-width: 600px;
+    margin: -44px auto 0;
+    font-size: 20px;
+    font-family: $inter;
   }
 
-  &__signature {
-    font-size: 14px;
-    color: #D02138;
+  &__type {
+    font-size: 24px;
+    color: $accent;
+    font-family: $inter;
+    line-height: 1;
     text-transform: uppercase;
-    font-family: $jetBrainsMono;
-    margin-bottom: 40px;
+    margin-bottom: 18px;
     display: block;
     @include r($lg) {
       margin-bottom: 30px;
@@ -34,43 +31,8 @@
   }
 
   &__title {
-    margin-bottom: 56px;
-    line-height: 1;
-    @include r($desktop) {
-      font-size: 74px;
-      margin-bottom: 46px;
-    }
-    @media (max-width: 1100px) {
-      font-size: 70px;
-    }
-    @include r($lg) {
-      font-size: 68px;
-      margin-bottom: 40px;
-    }
-    @include r($tablet) {
-      font-size: 64px;
-    }
-    @media (max-width: 660px) {
-      font-size: 60px;
-    }
-    @include r($sm) {
-      font-size: 58px;
-    }
-    @media (max-width: 530px) {
-      font-size: 54px;
-    }
-    @include r($phone) {
-      font-size: 50px;
-    }
-    @media (max-width: 430px) {
-      font-size: 48px;
-    }
-    @media (max-width: 410px) {
-      font-size: 46px;
-    }
-    @media (max-width: 380px) {
-      font-size: 44px;
-    }
+    margin-bottom: 80px;
+    line-height: 1.1;
   }
 
   &__text {
@@ -80,11 +42,14 @@
     }
 
     p {
-      color: rgba(#2C2C3C, .7);
+      color: #4A4A4A;
     }
 
     blockquote {
       @include flex-column(14);
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid $accent;
 
       &::before {
         @include bg;
@@ -108,7 +73,6 @@
         @include objectCoverBg;
         border-radius: 16px;
         border: 1px solid rgba(43, 43, 70, 0.12);
-        box-shadow: 0 8px 16px 0 rgba(25, 26, 32, 0.08);
         @include r($lg) {
           height: 320px;
         }
@@ -125,10 +89,9 @@
       }
 
       figcaption {
-        font-family: $jetBrainsMono;
         font-size: 14px;
         font-weight: 700;
-        color: #888897;
+        color: rgba(74, 74, 74, 0.82);
         margin: 0 auto;
         text-transform: uppercase;
       }

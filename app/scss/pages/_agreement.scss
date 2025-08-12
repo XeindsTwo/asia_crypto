@@ -1,36 +1,30 @@
 .agreement {
-  &__content {
-    max-width: 495px;
-    margin: -44px auto 120px;
-    @media (max-width: 992px) {
-      margin: 42px 0 110px;
-    }
-    @include r($sm) {
-      margin-top: 52px;
-    }
-    @media (max-width: 520px) {
-      margin-bottom: 90px;
-    }
-  }
-
   &__title {
-    margin-bottom: 56px;
-    @include r($desktop) {
-      max-width: 450px;
-    }
-    @include r($lg) {
-      max-width: 100%;
-      margin-bottom: 46px;
-    }
-    @media (max-width: 390px) {
-      font-size: 48px;
-      margin-bottom: 36px;
-    }
+    margin-bottom: 100px;
   }
 
-  &__text {
-    @include flex-column(24);
-    color: rgba(#2C2C3C, .7);
-    line-height: 1.2;
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+  }
+
+  &__column {
+    line-height: 1.4;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-family: $inter;
+    text-align: justify;
+    leading-trim: both;
+    text-edge: cap;
+  }
+
+  &__column p:first-child, &__block {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    color: $accent;
   }
 }

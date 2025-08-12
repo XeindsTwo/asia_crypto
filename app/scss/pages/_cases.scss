@@ -130,7 +130,6 @@
   &__head {
     @include flex-align-center(10);
     margin-bottom: 16px;
-    font-family: $jetBrainsMono;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 1.25;
@@ -203,7 +202,6 @@
     text-align: center;
     color: #86202c;
     text-transform: uppercase;
-    font-family: $jetBrainsMono;
     @include r($desktop) {
       margin-top: 65px;
     }

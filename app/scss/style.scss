@@ -1,9 +1,9 @@
-@import 'vendor/reset';
-@import 'vendor/fonts';
-@import 'vendor/vars';
-@import 'vendor/mixin';
-@import 'vendor/global';
-@import 'vendor/libs';
+@import 'basic/reset';
+@import 'basic/fonts';
+@import 'basic/vars';
+@import 'basic/mixin';
+@import 'basic/global';
+@import 'basic/libs';
 
 @import "components/menu-btn";
 @import "components/btn";
@@ -33,7 +33,7 @@
 @import "pages/about/about-start";
 @import "pages/about/about-numbers";
 @import "pages/verification";
+@import "pages/plans";
 
-@import "components/sections/features";
-@import "components/sections/guarantees";
 @import "components/sections/tariffs";
+@import "components/sections/banner";
