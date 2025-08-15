@@ -92,6 +92,10 @@
   &--gray {
     background-color: #4A4A4A;
 
+    &:hover {
+      background-color: #232323;
+    }
+
     &:focus {
       background-color: transparent;
       color: #4A4A4A;
@@ -102,10 +106,80 @@
   &--blue {
     background-color: #005F99;
 
+    &:hover {
+      background-color: #017dc6;
+    }
+
     &:focus {
       background-color: transparent;
       color: #005F99;
       border-color: #005F99;
+    }
+  }
+
+  &.border-top {
+    background-color: transparent;
+    color: $accent;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-image: repeating-linear-gradient(
+                    to right,
+                    $accent 0 10px,
+                    transparent 10px 20px
+    ) 1;
+
+    &:hover {
+      background-color: rgba($accent, 0.07);
+      color: darken($accent, 10%);
+      border-color: darken($accent, 10%);
+    }
+
+    &:focus {
+      background-color: rgba($accent, 0.15);
+      color: $black;
+      border-color: darken($accent, 20%);
+    }
+
+    &.blue {
+      color: #005f99;
+      border-image: repeating-linear-gradient(
+                      to right,
+                      #005f99 0 10px,
+                      transparent 10px 20px
+      ) 1;
+
+      &:hover {
+        background-color: rgba(#005f99, 0.07);
+        color: darken(#005f99, 10%);
+        border-color: darken(#005f99, 10%);
+      }
+
+      &:focus {
+        background-color: rgba(#005f99, 0.15);
+        color: $black;
+        border-color: darken(#005f99, 20%);
+      }
+    }
+
+    &.black {
+      color: #1A1A1A;
+      border-image: repeating-linear-gradient(
+                      to right,
+                      #1A1A1A 0 10px,
+                      transparent 10px 20px
+      ) 1;
+
+      &:hover {
+        background-color: rgba(#1A1A1A, 0.07);
+        color: lighten(#1A1A1A, 15%);
+        border-color: lighten(#1A1A1A, 15%);
+      }
+
+      &:focus {
+        background-color: rgba(#1A1A1A, 0.1);
+        color: $black;
+        border-color: #000;
+      }
     }
   }
 

@@ -28,18 +28,27 @@
     margin: 0 auto;
     font-size: 18px;
 
-    &:hover {
+    &.red:hover {
       background-color: $white;
       color: #1A1A1A;
     }
 
-    &:focus {
+    &.red:focus {
       background-color: transparent;
       color: white;
       border-color: #D02138;
+    }
 
-      &::before, &::after {
-        opacity: 0;
+    &.btn--gray {
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+
+      &:focus {
+        color: $white;
+        background-color: transparent;
+        border-color: #979797;
       }
     }
   }

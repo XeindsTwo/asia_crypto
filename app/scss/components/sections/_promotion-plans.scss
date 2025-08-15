@@ -1,0 +1,51 @@
+.promotion-plans {
+  &__img {
+    position: absolute;
+    z-index: -1;
+
+    &.one {
+      top: -80px;
+      right: -50px;
+    }
+
+    &.two {
+      bottom: -80px;
+      left: -240px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-family: $inter;
+    font-size: 48px;
+    line-height: 1.2;
+    color: $accent;
+    letter-spacing: 2.5px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+
+    &.blue {
+      color: #005F99;
+    }
+
+    &.black {
+      color: #4a4a4a;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 55px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-family: $inter;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+  }
+}

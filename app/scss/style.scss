@@ -9,18 +9,17 @@
 @import "components/btn";
 @import "components/footer";
 @import "components/header";
-@import "components/top";
 @import "components/title-section";
 @import "components/form-elements";
 @import "components/modal";
 @import "components/influencer-card";
 @import "components/tariff-card";
 @import "components/scroll-btn";
+@import "components/sections/tariffs";
+@import "components/sections/banner";
+@import "components/sections/promotion-plans";
 
 @import "home/home";
-@import "home/access";
-@import "home/trust";
-@import "home/leading";
 
 @import "pages/agreement";
 @import "pages/pricing";
@@ -36,6 +35,3 @@
 @import "pages/about/about-socials";
 @import "pages/verification";
 @import "pages/plans";
-
-@import "components/sections/tariffs";
-@import "components/sections/banner";

@@ -2,7 +2,7 @@
   border-radius: 5px;
   overflow: hidden;
   padding: 70px 35px;
-  background-color: #FAFAFA;
+  background-color: $white;
   box-shadow: 0 2px 10px 0 #B7A18F;
 
   &__head {
@@ -46,11 +46,16 @@
   }
 
   &__img {
+    @include objectCoverBg;
     margin: 0 auto 25px;
+
+    &.youtube {
+      transform: translateX(-11px);
+    }
   }
 
   &__list {
-    @include flex-column(35);
+    @include flex-column(28);
     margin-bottom: 32px;
     border: 2px dashed #ccc;
     border-radius: 12px;
@@ -77,5 +82,9 @@
   &__btn {
     font-size: 20px;
     margin: 0 auto;
+
+    &.black {
+      background-color: #4A4A4A;
+    }
   }
 }
