@@ -18,7 +18,7 @@
   transition: background-color .4s, border .4s, color .4s, transform .6s;
 
   &:hover {
-    background-color: #2C2C3C;
+    background-color: #1A1A1A;
     border-color: transparent;
     color: #f2f2f5;
   }
@@ -90,14 +90,22 @@
   }
 
   &--gray {
-    border-color: rgba(#3F3F4D, .34);
-    background-color: transparent;
-    color: #2C2C3C;
+    background-color: #4A4A4A;
 
     &:focus {
-      background-color: rgba(#2C2C3C, .94);
-      border-color: transparent;
-      color: $white;
+      background-color: transparent;
+      color: #4A4A4A;
+      border-color: #4A4A4A;
+    }
+  }
+
+  &--blue {
+    background-color: #005F99;
+
+    &:focus {
+      background-color: transparent;
+      color: #005F99;
+      border-color: #005F99;
     }
   }
 

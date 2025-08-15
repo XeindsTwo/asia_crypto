@@ -1,0 +1,45 @@
+.influencers {
+  background-color: $white;
+  position: relative;
+  @include r($sm) {
+    margin-bottom: 65px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 700;
+    font-family: $inter;
+    letter-spacing: 2.5px;
+    color: #1A1A1A;
+  }
+
+  &__text {
+    max-width: 760px;
+    font-size: 20px;
+    font-family: $inter;
+    margin: 0 auto 50px;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 20px;
+    justify-content: center;
+
+    & > * {
+      flex: 0 1 224px;
+    }
+  }
+
+  &__not-found {
+    margin-top: 60px;
+    font-size: 16px;
+    text-align: center;
+    color: #86202c;
+    text-transform: uppercase;
+  }
+}

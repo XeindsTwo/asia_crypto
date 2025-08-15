@@ -1,60 +1,72 @@
 .cases {
-  margin-bottom: 120px;
-  position: relative;
-  @include r($tablet) {
-    margin-bottom: 100px;
+  background-color: $white;
+
+  &__inner {
+    @include flex-column(0);
+    justify-content: center;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 115px;
   }
 
   &__title {
-    margin-bottom: 56px;
-    @include r($phone) {
-      margin-bottom: 46px;
-    }
+    max-width: 550px;
+  }
+
+  &__img {
+    @include objectCoverBg;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    z-index: -1;
   }
 
   &__tabs {
-    @include flex-align-center(10);
+    @include flex-align-center(22);
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 64px;
-    @include r($desktop) {
-      margin-bottom: 50px;
+    @include r($tablet) {
+      margin-bottom: 48px;
     }
-    @media (max-width: 860px) {
-      margin-bottom: 40px;
+    @media (max-width: 610px) {
+      max-width: 420px;
+      margin: 0 auto 48px;
+    }
+    @media (max-width: 520px) {
+      max-width: 390px;
+      margin: 0 auto 40px;
     }
     @include r($phone) {
-      margin-bottom: 30px;
+      max-width: 370px;
+      margin: 0 auto 35px;
     }
   }
 
   &__tab {
     @include flex-align-center(4);
     align-items: flex-start;
-    color: rgba(#2C2C3C, .3);
-    font-size: 40px;
-    letter-spacing: -0.8px;
+    color: #999999;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-family: $inter;
+    letter-spacing: 2px;
     line-height: 1;
     position: relative;
-    padding: 8px 12px;
+    padding: 8px 4px;
     border-radius: 5px;
     border: 2px solid transparent;
     transition: color .4s, border .4s, background-color .4s;
-    @include r($desktop) {
-      font-size: 36px;
-    }
     @include r($lg) {
-      font-size: 32px;
+      font-size: 28px;
     }
     @media (max-width: 900px) {
-      font-size: 30px;
-    }
-    @media (max-width: 780px) {
       font-size: 26px;
     }
-    @media (max-width: 520px) {
+    @media (max-width: 780px) {
       font-size: 24px;
     }
-    @include r($phone) {
+    @media (max-width: 520px) {
       font-size: 22px;
     }
 
@@ -63,41 +75,24 @@
     }
 
     &:focus {
-      border-color: #D02138;
+      border-color: $accent;
       color: #161616;
-
-      &::before {
-        background-color: transparent;
-      }
     }
 
-    &::before {
-      @include pseudo;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: transparent;
-      transition: background-color .4s;
+    &:not(:last-child) {
+      margin-right: 30px;
     }
 
     &--active {
-      color: #2C2C3C;
+      color: $accent;
       pointer-events: none;
-
-      &::before {
-        background-color: #2C2C3C;
-      }
     }
   }
 
   &__cards {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(5, 1fr);
-    @include r($desktop) {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    grid-gap: 50px 20px;
+    grid-template-columns: repeat(4, 1fr);
     @include r($lg) {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -109,98 +104,52 @@
     }
   }
 
-  &__card {
+  &__link {
     @include flex-column(0);
-    padding: 20px;
-    min-height: 330px;
-    border-radius: 16px;
-    background: #FBFBFB;
-    box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
-    @include r($desktop) {
-      min-height: 310px;
-    }
-    @include r($lg) {
-      min-height: 300px;
-    }
-    @media(max-width: 660px) {
-      min-height: 280px;
+    border-radius: 25px;
+    background: #fff;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    box-shadow: 0 2px 10px 0 #B7A18F;
+    transition: background-color .4s, box-shadow .4s, transform .4s;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 2px 10px 0 rgba(183, 161, 143, 0.59);
     }
   }
 
-  &__head {
-    @include flex-align-center(10);
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.25;
-    letter-spacing: -0.15px;
-    @media (max-width: 690px) {
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start;
-      margin-bottom: 26px;
-    }
-    @include r($phone) {
-      font-size: 13px;
-    }
+  &__preview {
+    @include objectCoverBg;
+    margin-bottom: 22px;
+  }
 
-    img {
-      height: auto;
-      width: 14px;
-    }
-
-    &.admin {
-      @media (max-width: 690px) {
-        align-items: center;
-        gap: 12px;
-      }
-    }
+  &__name, &__description {
+    padding: 0 20px;
   }
 
   &__name {
-    font-size: 40px;
+    letter-spacing: 2.5px;
+    font-size: 30px;
     line-height: 1.1;
-    font-weight: 400;
+    font-weight: 700;
+    color: #1A1A1A;
     word-break: break-word;
-    margin-bottom: 60px;
-    @include r($desktop) {
-      font-size: 36px;
-    }
-    @media (max-width: 1070px) {
-      font-size: 32px;
-    }
-    @include r($lg) {
-      font-size: 30px;
-    }
-    @include r($tablet) {
-      font-size: 28px;
-    }
-    @include r($phone) {
-      font-size: 26px;
-    }
-    @media (max-width: 400px) {
-      font-size: 24px;
-    }
+    margin-bottom: 12px;
   }
 
-  &__link {
-    margin-top: auto;
-    @include r($phone) {
-      font-size: 13px;
-      padding: 13px 18px;
-    }
-
-    &:hover {
-      background-color: transparent;
-      border-color: #D02138;
-      color: #161616;
-    }
+  &__description {
+    @include line-clamp(4);
+    font-size: 14px;
+    font-family: $inter;
   }
 
   &__not-found {
     font-size: 16px;
+    font-family: $inter;
     text-align: center;
-    color: #86202c;
+    color: $accent;
     text-transform: uppercase;
     @include r($desktop) {
       margin-top: 65px;
@@ -216,29 +165,23 @@
 
   &__more {
     @include flex-center;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    z-index: 15;
-    width: 100%;
-    height: 160px;
-    background: linear-gradient(180deg, rgba(241, 241, 245, 0.00) 0%, #F1F1F5 100%);
-    @media (max-width: 660px) {
-      height: 200px;
-    }
 
     &-btn {
-      background-color: #FBFBFB;
-      border-color: rgba(#000, .15);
+      padding: 17px 50px;
+      font-size: 18px;
+      margin-top: 50px;
     }
   }
 
-  &__form {
-    margin-top: 60px;
-    max-width: 500px;
+  &__container {
+    margin-bottom: 80px;
+    position: relative;
+  }
+}
 
-    &-field {
-      margin-bottom: 25px;
-    }
+.tabs-carousel {
+  .cases__tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 }

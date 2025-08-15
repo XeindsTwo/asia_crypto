@@ -1,21 +1,19 @@
 .modal {
   @include topLeft50;
   position: fixed;
-  max-width: 360px;
+  font-family: $inter;
+  max-width: 395px;
   max-height: 90vh;
   width: 96%;
-  padding: 40px 24px;
+  padding: 65px 40px 40px;
   opacity: 0;
   visibility: hidden;
   z-index: 50;
   border-radius: 16px;
-  background: linear-gradient(180deg, #F7F7F8 0%, rgba(247, 247, 248, 0.94) 100%);
+  background: $white;
   box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
   transform: translate(-50%, -25%);
   transition: transform .45s ease-in-out, visibility .4s, opacity .4s;
-  @media (max-width: 800px) {
-    padding-top: 30px;
-  }
   @media (max-width: 415px) {
     width: 95%;
     padding: 35px 20px 26px;
@@ -92,43 +90,54 @@
   }
 
   &__title {
+    @include flex-column(15);
+    text-align: center;
     line-height: 1.1;
     font-weight: 400;
-    font-size: 40px;
-    margin-bottom: 12px;
-    @media (max-width: 800px) {
-      font-size: 38px;
-    }
-    @include r($sm) {
-      font-size: 36px;
-      margin-bottom: 16px;
-    }
-    @media (max-width: 530px) {
-      font-size: 34px;
-    }
-    @media (max-width: 415px) {
-      font-size: 32px;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 1.7px;
+
+    &.non {
+      margin-bottom: 0;
     }
 
     span {
       color: rgba(#2c2c3c, .3);
+      font-size: 20px;
+      font-weight: 300;
+      color: #4A4A4A;
+      letter-spacing: 0.5px;
     }
   }
 
   &__subtext {
-    color: #2C2C3C;
     font-size: 18px;
-    margin-bottom: 32px;
-    @include r($phone) {
-      margin-bottom: 28px;
-      font-size: 17px;
-      max-width: 240px;
-    }
+    text-align: center;
+    color: #4A4A4A;
+    max-width: 300px;
+    margin: 20px auto 45px;
   }
 
   &__fields {
-    @include flex-column(8);
+    @include flex-column(9);
     margin-bottom: 32px;
+
+    label {
+      position: relative;
+
+      &::before {
+        @include pseudo;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #999999;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   .btn {
@@ -142,23 +151,20 @@
   }
 
   &__content {
-    font-size: 14px;
-    font-weight: 700;
+    @include flex-column(20);
+    font-size: 16px;
     text-transform: uppercase;
     color: rgba(#4D4D5A, .56);
   }
 
   &__countries, &__ages {
-    border-top: 1px solid #e5e5ea;
-    padding-top: 16px;
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
 
   &__ages {
-    margin-top: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
 
   &__country, &__age {
@@ -166,16 +172,31 @@
     align-items: center;
     gap: 24px;
     justify-content: space-between;
+
+    &-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #4A4A4A;
+    }
   }
 
   &__percent {
     font-size: 16px;
-    font-weight: 600;
-    color: #292524;
+    font-weight: 400;
+    color: #686868;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+
+  &__svg {
+    width: 100%;
   }
 
   .fi {
-    width: 1.1em;
+    width: 23px;
     line-height: 1;
   }
 }

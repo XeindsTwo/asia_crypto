@@ -1,0 +1,44 @@
+.influencers-start {
+  position: relative;
+  padding-bottom: 80px;
+
+  * {
+    position: relative;
+    z-index: 20;
+  }
+
+  &__subtitle {
+    &.gray {
+      color: #4A4A4A;
+    }
+  }
+
+  &__title {
+    max-width: 580px;
+    margin-bottom: 50px;
+  }
+
+  &__description {
+    max-width: 590px;
+    font-size: 20px;
+    font-family: $inter;
+    margin-bottom: 150px;
+  }
+
+  &__socials {
+    @include flex-align-center(100);
+    justify-content: center;
+  }
+
+  &__link {
+    @include flex-center;
+  }
+
+  &__img {
+    @include objectCoverBg;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+}

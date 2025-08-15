@@ -5,9 +5,86 @@ title: 'Asia Crypto | About us'
 <body class="body">
 @include('components/_header.html')
 <main>
-  @include('about/_about-start.html')
-  @include('about/_about-numbers.html')
-  @include('components/sections/_guarantees.html')
+  <section class="about indent">
+    <div class="container">
+      <span class="title-section__subtitle">WHO WE ARE</span>
+      <h1 class="about__title title-section">ABOUT US</h1>
+      <div class="about__items">
+        <img class="about__vertical" src="images/about/about-line.svg" alt="">
+        <img class="about__money left" src="images/about/money-left.png" alt="">
+        <img class="about__money right" src="images/about/money-right.png" alt="">
+        <div class="about__item">
+          <div class="about__content">
+            <span class="about__subtitle">REAL-WORLD EXPERIENCE</span>
+            <p class="about__text">
+              With over 5 years in the crypto and influencer marketing space, our team combines strategic thinking with
+              hands-on execution. We’ve worked with projects of all sizes — from early-stage launches to established
+              ecosystems — helping them grow through tailored campaigns and clear communication.
+            </p>
+          </div>
+          <img class="about__img one" src="images/about/1.png" alt="">
+        </div>
+        <div class="about__item">
+          <div class="about__content">
+            <span class="about__subtitle">PROVEN TRACK RECORD</span>
+            <p class="about__text">
+              We’ve successfully executed over 1000 campaigns across YouTube, Telegram, and X (Twitter), helping
+              projects build momentum and credibility in competitive markets. From awareness-driven pushes to
+              conversion-focused launches, we know how to project
+            </p>
+          </div>
+          <img class="about__img two" src="images/about/2.png" alt="">
+        </div>
+        <div class="about__item">
+          <div class="about__content">
+            <span class="about__subtitle">CUSTOM STRATEGIES</span>
+            <p class="about__text">
+              We take time to understand your goals, audience, and market position to build campaigns that actually fit.
+              Whether you're launching a token, growing a community, or preparing for a major announcement, we adapt our
+              approach to match your needs and deliver measurable results.
+            </p>
+          </div>
+          <img class="about__img three" src="images/about/3.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-socials indent">
+    <div class="container">
+      <h2 class="sr-only">Our socials network</h2>
+      <ul class="about-socials__list">
+        <li>
+          <div class="about-socials__link first">
+            <h3 class="about-socials__title">OUR <br> SOCIALS</h3>
+            <p class="about-socials__subtext">ASIACRYPTO 2025</p>
+          </div>
+        </li>
+        <li>
+          <a class="about-socials__link hover" href="" target="_blank">
+            <img src="images/about/twitter.png" width="285" height="250" loading="lazy" alt="Twitter (X) account">
+            <h3 class="about-socials__title">ACCOUNT</h3>
+            <p class="about-socials__subtext">X (TWITTER)</p>
+          </a>
+        </li>
+        <li>
+          <a class="about-socials__link hover" href="" target="_blank">
+            <img src="images/about/telegram.png" width="285" height="250" loading="lazy" alt="Group Telegram account">
+            <h3 class="about-socials__title">GROUP</h3>
+            <p class="about-socials__subtext">TELEGRAM</p>
+          </a>
+        </li>
+        <li>
+          <a class="about-socials__link hover" href="" target="_blank">
+            <img src="images/about/telegram_manager.png" width="285" height="250" loading="lazy"
+                 alt="Manager Telegram account">
+            <h3 class="about-socials__title">MANAGER</h3>
+            <p class="about-socials__subtext">TELEGRAM</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  @include('components/sections/_banner.html')
 </main>
 @include('components/_footer.html')
 @include('components/_modal-quote.html')

@@ -1,15 +1,17 @@
 .title-section {
-  font-size: 64px;
+  font-size: 60px;
   line-height: 1.1;
   font-weight: 700;
   color: #1A1A1A;
   text-transform: uppercase;
 
   &__subtitle {
-    font-size: 32px;
+    font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: $accent;
     font-family: $inter;
+    display: block;
+    margin-bottom: 17px;
   }
 }

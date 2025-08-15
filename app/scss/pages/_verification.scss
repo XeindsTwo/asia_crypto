@@ -9,21 +9,30 @@
   &__inner {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 200px 0;
+  }
 
-    div:first-child {
-      max-width: 750px;
-      width: 100%;
-    }
+  &__decor {
+    @include topLeft50;
+    position: absolute;
+    z-index: -1;
   }
 
   &__title {
-    margin-bottom: 56px;
-    @include r($tablet) {
-      max-width: 410px;
-    }
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    font-size: 20px;
+    font-family: $inter;
+    margin-bottom: 25px;
   }
 
   &__scammer {
@@ -32,67 +41,97 @@
     margin-bottom: 56px;
   }
 
-  &__form {
-    max-width: 375px;
+  &__message {
+    @include flex-column(16);
+    align-items: center;
+    margin-top: 35px;
+
+    &-text {
+      @include flex-align-center(20);
+      font-weight: 400;
+      font-family: $inter;
+      font-size: 32px;
+      letter-spacing: 1.7px;
+
+      &.success {
+        color: #1CB79D;
+      }
+
+      &.error {
+        color: $accent;
+      }
+    }
+
+    &-description {
+      max-width: 400px;
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 400;
+      font-family: $inter;
+    }
   }
 
-  &__label {
-    font-size: 20px;
-    display: block;
-    margin-bottom: 6px;
+  &__form {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    border-radius: 50px;
+    border: 1px solid #999;
+    padding: 8px;
+  }
+
+  &__select {
+    @include flex-align-center(15);
+  }
+
+  &__btn {
+    @include flex-center;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    &:hover {
+      svg path {
+        fill: $black;
+      }
+    }
+
+    &.active {
+      svg path {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__error {
+    margin-bottom: 12px;
+    font-family: $inter;
+    font-weight: 600;
+    color: #bd1616;
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__input {
-    margin-bottom: 32px;
+    border: none;
   }
 
-  &__img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: none;
-    @include objectCoverBg;
-    @media (max-width: 1100px) {
-      width: 340px;
-      height: 340px;
+  &__send {
+    padding: 17px 39px;
+    min-width: 130px;
+    transform: none;
+
+    &:disabled {
+      pointer-events: none;
+      user-select: none;
+      background-color: rgba($accent, .5);
     }
-    @include r($lg) {
-      width: 315px;
-      height: 315px;
-    }
-    @media (max-width: 910px) {
-      margin-right: -20px;
-    }
-    @include r($tablet) {
-      width: 275px;
-      height: 275px;
-      top: 10px;
-    }
-    @media (max-width: 720px) {
-      width: 250px;
-      height: 250px;
-    }
-    @media (max-width: 660px) {
-      width: 230px;
-      height: 230px;
-    }
-    @media (max-width: 620px) {
-      top: 0;
-      margin-right: -15px;
-      width: 210px;
-      height: 210px;
-    }
-    @media (max-width: 570px) {
-      width: 190px;
-      height: 190px;
-    }
-    @media (max-width: 550px) {
-      position: static;
-      margin-top: -30px;
-      margin-right: 0;
-      margin-left: -5px;
-      width: 170px;
-      height: 170px;
+
+    &:active {
+      transform: none;
     }
   }
 }

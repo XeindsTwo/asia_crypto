@@ -4,6 +4,10 @@
   position: relative;
   font-family: $inter;
 
+  &--white {
+    background-color: $white;
+  }
+
   &__line {
     @include pseudo;
     stroke-width: 1px;
