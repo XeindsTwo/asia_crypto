@@ -8,15 +8,18 @@
   padding: 65px 40px 40px;
   opacity: 0;
   visibility: hidden;
-  z-index: 50;
+  z-index: 1100;
   border-radius: 16px;
   background: $white;
   box-shadow: 0 2px 2px 0 rgba(196, 196, 206, 0.16);
   transform: translate(-50%, -25%);
   transition: transform .45s ease-in-out, visibility .4s, opacity .4s;
+  @media (max-width: 768px) {
+    padding: 45px 30px 30px;
+  }
   @media (max-width: 415px) {
     width: 95%;
-    padding: 35px 20px 26px;
+    padding-top: 65px;
   }
   @media (max-height: 680px) {
     overflow-y: scroll;
@@ -52,10 +55,12 @@
       box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .36);
     }
     @media (max-width: 415px) {
-      right: 9px;
-      top: 8px;
+      right: 11px;
+      top: 10px;
+      width: 42px;
+      height: 42px;
       background-color: #F6F6F6;
-      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .46);
+      box-shadow: 0 2px 5px 2px rgba(196, 196, 206, .66);
     }
     @media (max-height: 710px) {
       top: -20px;
@@ -98,6 +103,18 @@
     text-transform: uppercase;
     margin-bottom: 50px;
     letter-spacing: 1.7px;
+    @include r($sm) {
+      font-size: 30px;
+      letter-spacing: 1.3px;
+    }
+    @media (max-width: 468px) {
+      font-size: 28px;
+      letter-spacing: 0.7px;
+    }
+    @media (max-width: 400px) {
+      font-size: 27px;
+      letter-spacing: 0.4px;
+    }
 
     &.non {
       margin-bottom: 0;
@@ -118,6 +135,10 @@
     color: #4A4A4A;
     max-width: 300px;
     margin: 20px auto 45px;
+    @include r($phone) {
+      font-size: 17px;
+      margin-bottom: 35px;
+    }
   }
 
   &__fields {

@@ -1,11 +1,4 @@
 .verification {
-  @include r($lg) {
-    margin-bottom: 130px;
-  }
-  @include r($sm) {
-    margin-bottom: 110px;
-  }
-
   &__inner {
     position: relative;
     display: flex;
@@ -13,26 +6,100 @@
     align-items: center;
     text-align: center;
     padding: 200px 0;
+    @include r($desktop) {
+      padding: 160px 0;
+    }
+    @media (max-width: 1100px) {
+      padding: 140px 0;
+    }
+    @include r($lg) {
+      padding: 110px 0;
+    }
+    @media (max-width: 860px) {
+      padding: 80px 0 100px;
+    }
+    @include r($sm) {
+      padding: 65px 0 80px;
+    }
+    @media (max-width: 530px) {
+      padding-top: 55px;
+    }
+    @include r($phone) {
+      padding-top: 50px;
+    }
+
+    & > div:first-child {
+      width: 100%;
+    }
   }
 
   &__decor {
     @include topLeft50;
     position: absolute;
     z-index: -1;
+    @include r($desktop) {
+      width: 410px;
+      height: auto;
+    }
+    @media (max-width: 1100px) {
+      width: 390px;
+    }
+    @include r($lg) {
+      width: 360px;
+      opacity: .8;
+    }
+    @media (max-width: 860px) {
+      width: 330px;
+    }
+    @media (max-width: 700px) {
+      width: 310px;
+    }
+    @media (max-width: 530px) {
+      width: 290px;
+    }
+    @include r($phone) {
+      width: 280px;
+    }
+    @media (max-width: 390px) {
+      width: 270px;
+    }
   }
 
   &__title {
     margin-bottom: 15px;
+    @include r($phone) {
+      font-size: 36px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 40px;
+    @include r($phone) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 410px) {
+      max-width: 240px;
+      margin: 0 auto 40px;
+    }
   }
 
   &__info {
     font-size: 20px;
     font-family: $inter;
     margin-bottom: 25px;
+    @include r($lg) {
+      max-width: 550px;
+      margin: 0 auto 25px;
+    }
+    @include r($tablet) {
+      font-size: 19px;
+    }
+    @media (max-width: 530px) {
+      font-size: 18px;
+    }
+    @include r($phone) {
+      max-width: 350px;
+    }
   }
 
   &__scammer {
@@ -45,6 +112,13 @@
     @include flex-column(16);
     align-items: center;
     margin-top: 35px;
+    @include r($lg) {
+      gap: 12px;
+    }
+    @include r($sm) {
+      margin-top: 30px;
+      gap: 10px;
+    }
 
     &-text {
       @include flex-align-center(20);
@@ -52,6 +126,35 @@
       font-family: $inter;
       font-size: 32px;
       letter-spacing: 1.7px;
+      @include r($desktop) {
+        font-size: 30px;
+        gap: 17px;
+      }
+      @include r($lg) {
+        font-size: 26px;
+        gap: 15px;
+      }
+      @include r($tablet) {
+        font-size: 24px;
+      }
+      @include r($sm) {
+        gap: 11px;
+        font-size: 22px;
+
+        img {
+          width: 22px;
+          height: 22px;
+        }
+      }
+      @include r($phone) {
+        font-size: 20px;
+        gap: 7px;
+
+        img {
+          width: 19px;
+          height: 19px;
+        }
+      }
 
       &.success {
         color: #1CB79D;
@@ -68,6 +171,9 @@
       line-height: 1.4;
       font-weight: 400;
       font-family: $inter;
+      @include r($lg) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -79,10 +185,36 @@
     border-radius: 50px;
     border: 1px solid #999;
     padding: 8px;
+    @include r($lg) {
+      gap: 35px;
+    }
+    @media (max-width: 860px) {
+      gap: 22px;
+    }
+    @include r($tablet) {
+      flex-wrap: wrap;
+      gap: 25px 30px;
+      padding: 16px 8px;
+      border-color: #1A1A1A;
+      border-radius: 26px;
+    }
+    @media (max-width: 680px) {
+      padding: 18px 14px;
+      border-radius: 20px;
+    }
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+    @media (max-width: 400px) {
+      margin: 0 -4px;
+    }
   }
 
   &__select {
     @include flex-align-center(15);
+    @include r($lg) {
+      gap: 8px;
+    }
   }
 
   &__btn {
@@ -92,6 +224,12 @@
 
     &:hover {
       svg path {
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      svg path {
         fill: $black;
       }
     }
@@ -99,6 +237,17 @@
     &.active {
       svg path {
         fill: $accent;
+      }
+    }
+
+    svg {
+      @media (max-width: 860px) {
+        width: 46px;
+        height: 46px;
+      }
+      @include r($tablet) {
+        width: 43px;
+        height: 43px;
       }
     }
   }
@@ -117,12 +266,41 @@
 
   &__input {
     border: none;
+    @include r($tablet) {
+      max-width: 440px;
+      border-bottom: 1px solid #4a4a4a;
+    }
+    @media (max-width: 750px) {
+      max-width: 410px;
+    }
+    @media (max-width: 720px) {
+      max-width: 390px;
+    }
+    @media (max-width: 700px) {
+      max-width: 370px;
+    }
+    @media (max-width: 680px) {
+      max-width: 350px;
+      font-size: 17px;
+    }
+    @media (max-width: 670px) {
+      max-width: 340px;
+    }
+    @include r($sm) {
+      max-width: 380px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+    }
   }
 
   &__send {
     padding: 17px 39px;
     min-width: 130px;
     transform: none;
+    @include r($tablet) {
+      min-width: 160px;
+    }
 
     &:disabled {
       pointer-events: none;

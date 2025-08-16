@@ -78,9 +78,6 @@
 .indent {
   margin-bottom: 110px;
   @include r($lg) {
-    margin-bottom: 90px;
-  }
-  @include r($phone) {
     margin-bottom: 80px;
   }
 }
