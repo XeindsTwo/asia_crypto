@@ -1,12 +1,31 @@
 .agreement {
   &__title {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    @include r($lg) {
+      margin-bottom: 60px;
+    }
+    @include r($phone) {
+      margin-bottom: 45px;
+    }
   }
 
   &__columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 100px;
+    @include r($desktop) {
+      grid-gap: 75px;
+    }
+    @media (max-width: 900px) {
+      grid-gap: 65px;
+    }
+    @include r($tablet) {
+      grid-gap: 55px;
+    }
+    @media (max-width: 670px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__column {
@@ -18,9 +37,23 @@
     text-align: justify;
     leading-trim: both;
     text-edge: cap;
+    @include r($lg) {
+      font-size: 18px;
+    }
+    @include r($phone) {
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    &:last-child {
+      @media (max-width: 670px) {
+        padding-top: 30px;
+        border-top: 1px solid rgba($accent, .5);
+      }
+    }
   }
 
-  &__column p:first-child, &__block {
+  &__column p:first-child, &__block:not(:last-child) {
     margin-bottom: 30px;
   }
 
