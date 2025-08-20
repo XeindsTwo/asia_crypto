@@ -40,12 +40,15 @@
     }
     @include r($lg) {
       font-size: 22px;
+      letter-spacing: 1.6px;
     }
     @include r($sm) {
       font-size: 20px;
+      letter-spacing: 1.2px;
     }
     @include r($phone) {
       font-size: 18px;
+      letter-spacing: 0.9px;
     }
   }
 }

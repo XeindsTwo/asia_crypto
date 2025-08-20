@@ -111,6 +111,29 @@
         width: 300px;
       }
     }
+
+    &.twitter, &.youtube {
+      @include r($lg) {
+        width: 136px;
+        height: auto;
+      }
+      @include r($phone) {
+        width: 130px;
+      }
+    }
+
+    &.telegram {
+      @include r($lg) {
+        width: 124px;
+        height: auto;
+      }
+      @include r($sm) {
+        width: 118px;
+      }
+      @include r($phone) {
+        width: 112px;
+      }
+    }
   }
 
   &__list {

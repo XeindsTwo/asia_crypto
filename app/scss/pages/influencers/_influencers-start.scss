@@ -1,13 +1,56 @@
 .influencers-start {
   position: relative;
   padding-bottom: 80px;
+  @include r($lg) {
+    padding-bottom: 70px;
+  }
+  @include r($sm) {
+    padding-bottom: 60px;
+  }
 
   * {
     position: relative;
     z-index: 20;
   }
 
+  &.youtube, &.telegram, &.twitter {
+    @include r($lg) {
+      @include bg;
+    }
+  }
+
+  &.youtube {
+    @include r($lg) {
+      background-image: url("../images/influencers/youtube-adaptive.png");
+    }
+    @media (max-width: 820px) {
+      background-image: none;
+    }
+  }
+
+  &.telegram {
+    @include r($lg) {
+      background-image: url("../images/influencers/telegram-adaptive.png");
+    }
+    @media (max-width: 820px) {
+      background-image: none;
+    }
+  }
+
+  &.twitter {
+    @include r($lg) {
+      background-image: url("../images/influencers/twitter-adaptive.png");
+    }
+    @media (max-width: 820px) {
+      background-image: none;
+    }
+  }
+
   &__subtitle {
+    @include r($lg) {
+      text-align: center;
+    }
+
     &.gray {
       color: #4A4A4A;
     }
@@ -20,6 +63,24 @@
   &__title {
     max-width: 580px;
     margin-bottom: 50px;
+    @include r($desktop) {
+      margin-bottom: 40px;
+    }
+    @include r($lg) {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+    @include r($phone) {
+      font-size: 38px;
+    }
+    @media (max-width: 430px) {
+      font-size: 36px;
+    }
+    @media (max-width: 390px) {
+      font-size: 34px;
+      margin-bottom: 45px;
+    }
   }
 
   &__description {
@@ -27,11 +88,41 @@
     font-size: 20px;
     font-family: $inter;
     margin-bottom: 120px;
+    @media (max-width: 1400px) {
+      margin-bottom: 80px;
+    }
+    @include r($desktop) {
+      max-width: 560px;
+    }
+    @include r($lg) {
+      text-align: center;
+      margin: 0 auto 50px;
+      font-size: 19px;
+    }
+    @include r($sm) {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    @include r($phone) {
+      font-size: 17px;
+    }
   }
 
   &__socials {
     @include flex-align-center(100);
     justify-content: center;
+    @include r($desktop) {
+      gap: 60px;
+    }
+    @include r($lg) {
+      gap: 50px;
+    }
+    @media (max-width: 530px) {
+      gap: 35px;
+    }
+    @include r($phone) {
+      gap: 30px;
+    }
   }
 
   &__link {
@@ -74,5 +165,28 @@
     right: 0;
     bottom: 0;
     z-index: 10;
+    @media (max-width: 1650px) {
+      right: -200px;
+    }
+    @media (max-width: 1400px) {
+      width: 910px;
+      height: auto;
+    }
+    @media (max-width: 1300px) {
+      width: 850px;
+      bottom: 20px;
+      right: -230px;
+    }
+    @include r($desktop) {
+      right: -280px;
+      width: 820px;
+    }
+    @media (max-width: 1100px) {
+      width: 770px;
+      bottom: 50px;
+    }
+    @include r($lg) {
+      display: none;
+    }
   }
 }

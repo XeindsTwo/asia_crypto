@@ -6,11 +6,47 @@
     &.one {
       top: -80px;
       right: -50px;
+      @media (max-width: 1400px) {
+        height: auto;
+        width: 30%;
+        right: -60px;
+      }
+      @include r($lg) {
+        width: 35%;
+      }
+      @media (max-width: 860px) {
+        right: -110px;
+      }
+      @include r($tablet) {
+        right: -90px;
+        top: -110px;
+      }
+      @media (max-width: 660px) {
+        right: -40px;
+        top: -80px;
+      }
+      @media (max-width: 580px) {
+        width: 40%;
+      }
+      @include r($phone) {
+        width: 43%;
+        right: -30px;
+        top: -70px;
+      }
     }
 
     &.two {
       bottom: -80px;
       left: -240px;
+      @media (max-width: 1400px) {
+        left: -180px;
+      }
+      @include r($desktop) {
+        left: -130px;
+      }
+      @include r($lg) {
+        display: none;
+      }
     }
   }
 
@@ -23,6 +59,41 @@
     letter-spacing: 2.5px;
     margin-bottom: 13px;
     text-transform: uppercase;
+    @include r($desktop) {
+      font-size: 44px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+    @include r($lg) {
+      font-size: 38px;
+    }
+    @media (max-width: 860px) {
+      text-align: center;
+    }
+    @include r($tablet) {
+      font-size: 36px;
+    }
+    @media (max-width: 660px) {
+      max-width: 390px;
+      letter-spacing: 1.4px;
+      margin: 0 auto 13px;
+    }
+    @include r($sm) {
+      font-size: 34px;
+    }
+    @include r($phone) {
+      font-size: 32px;
+      max-width: 360px;
+    }
+    @media (max-width: 410px) {
+      font-size: 30px;
+      max-width: 310px;
+    }
+    @media (max-width: 380px) {
+      font-size: 28px;
+    }
 
     &.blue {
       color: #005F99;
@@ -41,11 +112,35 @@
     font-family: $inter;
     color: $black;
     text-transform: uppercase;
-  }
-
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 8px;
+    @include r($desktop) {
+      font-size: 28px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 26px;
+      letter-spacing: 1.4px;
+    }
+    @include r($lg) {
+      font-size: 24px;
+    }
+    @media (max-width: 860px) {
+      text-align: center;
+    }
+    @include r($tablet) {
+      font-size: 22px;
+    }
+    @include r($sm) {
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+    }
+    @include r($phone) {
+      font-size: 19px;
+      letter-spacing: 0.7px;
+      max-width: 270px;
+      margin: 0 auto 40px;
+    }
+    @media (max-width: 410px) {
+      font-size: 18px;
+    }
   }
 }

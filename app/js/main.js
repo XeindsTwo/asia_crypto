@@ -4,11 +4,11 @@ import {setupMobileMenu} from "./components/mobileMenu.js";
 modalQuote();
 setupMobileMenu();
 
-new Swiper('.swiper-plans', {
+new Swiper('.slider-plans', {
   loop: false,
   navigation: {
-    nextEl: '.pricing__btn--next',
-    prevEl: '.pricing__btn--prev',
+    nextEl: '.slider-plans__btn--next',
+    prevEl: '.slider-plans__btn--prev',
   },
   breakpoints: {
     1260: {
