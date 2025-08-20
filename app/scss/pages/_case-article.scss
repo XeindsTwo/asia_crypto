@@ -1,5 +1,8 @@
 .cases-article {
   position: relative;
+  @media (max-width: 1100px) {
+    margin-top: -60px;
+  }
 
   &__back {
     @include r($sm) {
@@ -12,7 +15,7 @@
     margin: -44px auto 0;
     font-size: 20px;
     font-family: $inter;
-    @media (max-width: 1060px) {
+    @media (max-width: 1100px) {
       margin: 40px auto 0;
     }
     @include r($lg) {
@@ -35,6 +38,9 @@
       margin-bottom: 10px;
       font-size: 22px;
     }
+    @media (max-width: 1100px) {
+      text-align: center;
+    }
     @include r($lg) {
       font-size: 20px;
     }
@@ -51,6 +57,9 @@
     line-height: 1.1;
     @media (max-width: 1100px) {
       margin-bottom: 60px;
+    }
+    @media (max-width: 1100px) {
+      text-align: center;
     }
     @include r($tablet) {
       margin-bottom: 50px;

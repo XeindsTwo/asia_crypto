@@ -94,6 +94,11 @@
     }
   }
 
+  &__img {
+    @include objectCoverBg;
+    margin: 0 auto 50px;
+  }
+
   &__title {
     @include flex-column(15);
     text-align: center;
@@ -101,7 +106,7 @@
     font-weight: 400;
     font-size: 32px;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     letter-spacing: 1.7px;
     @include r($sm) {
       font-size: 30px;
@@ -120,6 +125,10 @@
       margin-bottom: 0;
     }
 
+    &.mb50 {
+      margin-bottom: 50px;
+    }
+
     span {
       color: rgba(#2c2c3c, .3);
       font-size: 20px;
@@ -133,7 +142,7 @@
     font-size: 18px;
     text-align: center;
     color: #4A4A4A;
-    max-width: 300px;
+    max-width: 250px;
     margin: 20px auto 45px;
     @include r($phone) {
       font-size: 17px;
@@ -162,6 +171,8 @@
   }
 
   .btn {
+    margin: 0 auto;
+
     @include r($phone) {
       font-size: 13px;
     }

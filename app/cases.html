@@ -17,6 +17,12 @@
   <header class="header" id="header">
   <div class="container">
     <div class="header__inner">
+      <div class="header__left">
+        <button class="menu-btn menu-btn--header" type="button">
+          <span class="menu-btn__line"></span>
+          <span class="sr-only">Interact with menu</span>
+        </button>
+      </div>
       <div class="header__logo">
         <a class="header__logo-link" href="/">
           <img src="images/logo.svg" width="150" height="48" alt="">
@@ -52,14 +58,11 @@
         <button class="header__btn btn btn--transparent" type="button" data-btn-quote>
           Start Campaign
         </button>
-        <button class="menu-btn menu-btn--header" type="button">
-          <span class="menu-btn__line"></span>
-          <span class="sr-only">Interact with menu</span>
-        </button>
       </div>
     </div>
   </div>
   <div class="header__mobile">
+    <span class="header__line"></span>
     <nav class="header__nav mobile">
       <ul class="header__list">
         <li class="header__item">
@@ -86,6 +89,24 @@
         </li>
       </ul>
     </nav>
+    <span class="header__line"></span>
+    <ul class="header__socials">
+      <li>
+        <a class="header__social" href="" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M15 0C6.708 0 0 6.72 0 15C0 23.292 6.708 30 15 30C23.28 30 30 23.292 30 15C30 6.72 23.28 0 15 0ZM18.036 22.5L13.944 16.68L8.82001 22.5H7.5L13.356 15.84L7.5 7.5H11.964L15.84 13.02L20.688 7.5H22.02L16.428 13.86L22.5 22.5H18.036Z" fill="#B71C1C"/>
+            <path d="M20.688 21.576H18.66L14.616 15.924L14.028 15.084L9.3 8.48401H11.34L15.144 13.812L15.732 14.64L20.688 21.576Z" fill="#B71C1C"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="header__social" href="" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M15 0C6.7164 0 0 6.7164 0 15C0 23.2836 6.7164 30 15 30C23.2836 30 30 23.2836 30 15C30 6.7164 23.2836 0 15 0ZM22.3668 10.2768L19.9044 21.8771C19.7232 22.7003 19.2336 22.8999 18.5496 22.5123L14.7996 19.7496L12.9924 21.4922C12.8172 21.7178 12.546 21.8607 12.2424 21.8607C12.24 21.8607 12.2388 21.8607 12.2364 21.8607L12.5028 18.0434L19.4532 11.7662C19.7532 11.4998 19.386 11.3486 18.9876 11.615L10.4016 17.0221L6.70203 15.8678C5.90163 15.6146 5.88002 15.0672 6.87122 14.6748L21.3288 9.10195C22.0008 8.85715 22.5864 9.26212 22.3692 10.2785L22.3668 10.2768Z" fill="#B71C1C"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 </header>
   <main class="main">
@@ -96,7 +117,7 @@
           <h1 class="cases__title title-section">
             PROJECTS THAT TRUSTED US
           </h1>
-          <img class="cases__img" src="images/hero-cases.png" width="546" height="400" alt="decor cases image">
+          <img class="cases__img" src="images/hero-cases.webp" width="546" height="400" alt="decor cases image">
         </div>
       </div>
     </section>
@@ -121,7 +142,7 @@
         <ul class="cases__cards">
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/1.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/1.webp" width="285" height="250" alt="">
               <p class="cases__name">BYBIT</p>
               <p class="cases__description">
                 MemeCoin
@@ -130,7 +151,7 @@
           </li>
           <li class="cases__card" data-tab-content="2">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/1.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/1.webp" width="285" height="250" alt="">
               <p class="cases__name">PEPE JUICE</p>
               <p class="cases__description">
                 Meme Coin
@@ -139,7 +160,7 @@
           </li>
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/3.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/3.webp" width="285" height="250" alt="">
               <p class="cases__name">ARTYFACT</p>
               <p class="cases__description">
                 Hah?
@@ -148,7 +169,7 @@
           </li>
           <li class="cases__card" data-tab-content="3">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/4.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/4.webp" width="285" height="250" alt="">
               <p class="cases__name">AXIOMICA</p>
               <p class="cases__description">
                 Meme Coin
@@ -157,7 +178,7 @@
           </li>
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/5.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/5.webp" width="285" height="250" alt="">
               <p class="cases__name">AXIOMICA</p>
               <p class="cases__description">
                 Meme Coin
@@ -166,14 +187,14 @@
           </li>
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/1.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/1.webp" width="285" height="250" alt="">
               <p class="cases__name">BYBIT</p>
               <p class="cases__description">ByBit</p>
             </a>
           </li>
           <li class="cases__card" data-tab-content="2">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/1.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/1.webp" width="285" height="250" alt="">
               <p class="cases__name">PEPE JUICE</p>
               <p class="cases__description">
                 Meme Coin
@@ -182,14 +203,14 @@
           </li>
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/3.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/3.webp" width="285" height="250" alt="">
               <p class="cases__name">ARTYFACT</p>
               <p class="cases__description">ByBit</p>
             </a>
           </li>
           <li class="cases__card" data-tab-content="3">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/4.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/4.webp" width="285" height="250" alt="">
               <p class="cases__name">AXIOMICA</p>
               <p class="cases__description">
                 Meme Coin
@@ -198,7 +219,7 @@
           </li>
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/5.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/5.webp" width="285" height="250" alt="">
               <p class="cases__name">AXIOMICA</p>
               <p class="cases__description">
                 Meme Coin
@@ -207,14 +228,14 @@
           </li>
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/1.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/1.webp" width="285" height="250" alt="">
               <p class="cases__name">BYBIT</p>
               <p class="cases__description">ByBit</p>
             </a>
           </li>
           <li class="cases__card" data-tab-content="2">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/1.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/1.webp" width="285" height="250" alt="">
               <p class="cases__name">PEPE JUICE</p>
               <p class="cases__description">
                 Meme Coin
@@ -223,7 +244,7 @@
           </li>
           <li class="cases__card" data-tab-content="1">
             <a class="cases__link" href="case-article.html" target="_blank">
-              <img class="cases__preview" src="images/cases/3.png" width="285" height="250" alt="">
+              <img class="cases__preview" src="images/cases/3.webp" width="285" height="250" alt="">
               <p class="cases__name">ARTYFACT</p>
               <p class="cases__description">ByBit</p>
             </a>
@@ -350,13 +371,12 @@
           fill="#2C2C3C"/>
     </svg>
   </button>
-  <img src="images/icons/check-success.svg" width="56" height="56" alt="check success">
+  <img class="modal__img" src="images/icons/thanks.svg" width="100" height="100" alt="check success">
   <h3 class="modal__title">Thank You!</h3>
   <p class="modal__subtext">
-    Our manager will contact you within 1 hour via the provided details. If you have any urgent questions,
-    feel free to reach out to us at: @YourManagerHandle
+    Your request has been received. We'll contact you soon via Telegram or email.
   </p>
-  <button class="btn" type="button">Go to Home</button>
+  <button class="btn" type="button">Close</button>
 </div>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="js/main.min.js" type="module"></script>
