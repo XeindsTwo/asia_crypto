@@ -1,28 +1,32 @@
-.about {
-  padding-top: 80px;
+.how-work {
   font-family: $inter;
-  @include r($tablet) {
-    padding-top: 60px;
-  }
 
   &__title {
-    margin-bottom: 30px;
+    @include r($lg) {
+      text-align: center;
+    }
+  }
+
+  &__subtext {
+    margin-bottom: 80px;
     @include r($lg) {
       margin-bottom: 60px;
+      text-align: center;
     }
     @include r($tablet) {
+      font-size: 20px;
       margin-bottom: 50px;
     }
-
-    &, &-subtitle {
-      @include r($lg) {
-        text-align: center;
-      }
+    @include r($sm) {
+      font-size: 18px;
     }
   }
 
   &__money {
     position: absolute;
+    @media (max-width: 1260px) {
+      display: none;
+    }
 
     &.left {
       left: -280px;
@@ -50,8 +54,8 @@
     }
 
     &.right {
-      right: -290px;
-      bottom: 15%;
+      right: -280px;
+      bottom: 12%;
       @media (max-width: 1560px) {
         right: -270px;
       }
@@ -61,20 +65,22 @@
         bottom: 24%;
         right: -200px;
       }
-      @media (max-width: 1360px) {
-        display: none;
+      @media (max-width: 1400px) {
+        right: -160px;
       }
     }
   }
 
   &__items {
     position: relative;
-    @include flex-column(180);
+    @include flex-column(160);
     @media (max-width: 1120px) {
       gap: 131px;
     }
     @include r($lg) {
-      gap: 60px;
+      gap: 50px;
+      margin: 0 auto;
+      max-width: 850px;
     }
     @media (max-width: 940px) {
       gap: 50px;
@@ -164,7 +170,7 @@
       max-width: 430px;
     }
     @media (max-width: 940px) {
-      max-width: 380px;
+      max-width: 400px;
     }
     @media (max-width: 890px) {
       max-width: 360px;
@@ -181,32 +187,41 @@
 
     &.one {
       @media (max-width: 850px) {
-        margin-top: -170px;
+        margin-top: -70px;
       }
-      @media (max-width: 530px) {
-        margin-top: -150px;
+      @media (max-width: 515px) {
+        margin-top: -60px;
       }
-      @media (max-width: 440px) {
-        margin-top: -135px;
-      }
-      @media (max-width: 410px) {
-        margin-top: -120px;
+      @media (max-width: 400px) {
+        margin-top: -45px;
       }
     }
 
     &.two {
-      margin-top: -40px;
+      margin-left: auto;
+      margin-right: 0;
+      text-align: right;
+      margin-top: -45px;
       @include r($lg) {
         margin-top: 0;
       }
-      @media (max-width: 530px) {
-        margin-top: -80px;
+      @media (max-width: 850px) {
+        margin-top: -105px;
+        text-align: center;
+        margin-left: 0;
       }
-      @media (max-width: 440px) {
-        margin-top: -70px;
+      @media (max-width: 515px) {
+        margin-top: -85px;
       }
-      @media (max-width: 410px) {
-        margin-top: -60px;
+      @media (max-width: 400px) {
+        margin-top: -65px;
+      }
+
+      .how-work__text {
+        text-align-last: right;
+        @media (max-width: 850px) {
+          text-align-last: center;
+        }
       }
     }
 
@@ -214,8 +229,11 @@
       @media (max-width: 850px) {
         margin-top: -70px;
       }
-      @media (max-width: 440px) {
-        margin-top: -60px;
+      @media (max-width: 515px) {
+        margin-top: -45px;
+      }
+      @media (max-width: 400px) {
+        margin-top: -32px;
       }
     }
   }
@@ -238,6 +256,9 @@
     }
     @include r($phone) {
       font-size: 22px;
+    }
+    @media (max-width: 410px) {
+      font-size: 21px;
     }
   }
 
@@ -263,109 +284,119 @@
     }
 
     &.one {
-      right: -108px;
-      top: -70px;
-      @media (max-width: 1300px) {
-        right: -85px;
-        top: -40px;
-        width: 690px;
+      right: -220px;
+      top: -185px;
+      @media (max-width: 1260px) {
+        right: -230px;
+        top: -170px;
       }
       @media (max-width: 1180px) {
-        width: 650px;
-        right: -75px;
-        top: -40px;
-        z-index: 600;
-      }
-      @media (max-width: 1050px) {
-        width: 600px;
-        right: -70px;
-        top: -30px;
-      }
-      @media (max-width: 1020px) {
-        width: 570px;
-        top: -10px;
+        right: -200px;
+        top: -150px;
       }
       @include r($lg) {
-        width: 417px;
-        top: 16px;
-        right: -21px;
+        width: 1200px;
+        top: -120px;
+        right: -180px;
       }
       @media (max-width: 940px) {
-        top: 30px;
+        top: -90px;
       }
-      @media (max-width: 530px) {
-        width: 390px;
+      @media (max-width: 850px) {
+        display: none;
+      }
+
+      &-adaptive {
+        display: none;
+        @media (max-width: 850px) {
+          display: block;
+          width: 540px;
+          margin-left: -255px;
+          margin-top: -60px;
+        }
+        @media (max-width: 550px) {
+          margin-left: -210px;
+        }
+        @media (max-width: 515px) {
+          margin-left: -190px;
+          margin-top: -50px;
+        }
+        @include r($phone) {
+          margin-left: -48%;
+        }
       }
     }
 
     &.two {
-      left: -120px;
-      top: -150px;
+      left: -340px;
+      top: -280px;
       z-index: 500;
-      @media (max-width: 1300px) {
-        width: 650px;
-        left: -85px;
-        top: -140px;
-      }
       @media (max-width: 1180px) {
-        width: 600px;
-        top: -120px;
-        left: -70px;
+        left: -370px;
       }
-      @media (max-width: 1050px) {
-        width: 570px;
-        left: -60px;
-        top: -100px;
+      @media (max-width: 1080px) {
+        left: -400px;
       }
       @include r($lg) {
-        width: 475px;
-        left: -25px;
-        top: -44px;
+        width: 610px;
+        left: -300px;
+        top: -115px;
       }
-      @media (max-width: 900px) {
-        width: 445px;
-        top: -20px;
+      @media (max-width: 850px) {
+        margin-left: -335px;
+        margin-top: -110px;
       }
-      @media (max-width: 530px) {
-        width: 390px;
-        transform: translateX(-9px);
+      @media (max-width: 650px) {
+        margin-left: -290px;
+      }
+      @media (max-width: 550px) {
+        margin-left: -255px;
+      }
+      @media (max-width: 515px) {
+        margin-left: -230px;
+        margin-top: -80px;
+      }
+      @include r($phone) {
+        margin-left: -54%;
+      }
+      @media (max-width: 400px) {
+        margin-top: -65px;
       }
     }
 
     &.three {
-      right: -20px;
-      top: -130px;
-      @media (max-width: 1300px) {
-        right: -10px;
-        top: -130px;
-        width: 535px;
-      }
+      right: -100px;
+      top: -150px;
       @media (max-width: 1180px) {
-        width: 500px;
-        top: -110px;
-        right: 0;
-        z-index: 600;
-      }
-      @media (max-width: 1050px) {
-        width: 470px;
-        top: -90px;
+        right: -130px;
+        z-index: 310;
       }
       @include r($lg) {
-        width: 420px;
-        top: -30px;
-        right: 15px;
+        width: 670px;
+        right: -110px;
+        top: -55px;
       }
       @media (max-width: 940px) {
-        width: 400px;
-        right: 10px;
-        top: 10px;
+        top: -40px;
       }
-      @media (max-width: 900px) {
-        width: 370px;
-        top: 25px;
+      @media (max-width: 850px) {
+        margin-left: -115px;
+        margin-top: -55px;
       }
-      @media (max-width: 530px) {
-        width: 340px;
+      @media (max-width: 650px) {
+        width: 700px;
+        margin-left: -90px;
+      }
+      @media (max-width: 515px) {
+        margin-top: -30px;
+        margin-left: -75px;
+      }
+      @include r($phone) {
+        margin-left: -18%;
+        margin-top: -40px;
+      }
+      @media (max-width: 400px) {
+        margin-top: -30px;
       }
     }
   }
@@ -376,7 +407,7 @@
     left: 50%;
     z-index: 300;
     transform: translateX(-50%);
-    @media (max-width: 1120px) {
+    @media (max-width: 1020px) {
       display: none;
     }
   }

@@ -1,0 +1,113 @@
+.partnership {
+  padding-bottom: 140px;
+  background-color: $white;
+  @include r($desktop) {
+    padding-bottom: 120px;
+  }
+  @include r($sm) {
+    padding-bottom: 100px;
+  }
+  @include r($phone) {
+    padding-bottom: 90px;
+  }
+
+  &__text, &__title {
+    text-align: center;
+  }
+
+  &__text {
+    font-family: $inter;
+    max-width: 850px;
+    font-size: 20px;
+    margin: 0 auto 50px;
+    @include r($lg) {
+      font-size: 18px;
+      max-width: 590px;
+    }
+    @media (max-width: 545px) {
+      font-size: 17px;
+      max-width: 440px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 430px) {
+      max-width: 340px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    grid-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 1100px) {
+      grid-gap: 15px;
+    }
+    @include r($lg) {
+      display: none;
+    }
+
+    li {
+      @include r($desktop) {
+        width: 250px;
+      }
+      @media (max-width: 1100px) {
+        width: 230px;
+      }
+      @media (max-width: 1020px) {
+        width: 220px;
+      }
+    }
+  }
+
+  &__img {
+    @include objectCoverBg;
+    border-radius: 20px;
+    @include r($desktop) {
+      height: 110px;
+    }
+    @media (max-width: 1100px) {
+      height: 104px;
+    }
+    @include r($lg) {
+      border-radius: 25px;
+    }
+  }
+}
+
+.logos {
+  display: none;
+  overflow: hidden;
+  white-space: nowrap;
+  @include r($lg) {
+    display: flex;
+  }
+}
+
+.logos-slide {
+  display: flex;
+  gap: 7px;
+
+  img {
+    width: auto;
+    max-width: initial;
+    height: 110px;
+    margin: 0;
+    display: inline;
+    @media (max-width: 768px) {
+      height: 100px;
+    }
+    @media (max-width: 630px) {
+      height: 92px;
+      border-radius: 20px;
+    }
+    @media (max-width: 510px) {
+      height: 86px;
+    }
+    @media (max-width: 400px) {
+      height: 82px;
+    }
+    @media (max-width: 380px) {
+      height: 76px;
+    }
+  }
+}

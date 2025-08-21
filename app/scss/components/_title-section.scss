@@ -23,6 +23,27 @@
     font-size: 38px;
   }
 
+  &.small {
+    font-family: $inter;
+    font-size: 48px;
+    letter-spacing: 2.5px;
+    margin-bottom: 19px;
+    @include r($desktop) {
+      font-size: 44px;
+      letter-spacing: 2px;
+    }
+    @include r($lg) {
+      font-size: 38px;
+      letter-spacing: 1.7px;
+    }
+    @include r($tablet) {
+      font-size: 34px;
+    }
+    @include r($sm) {
+      font-size: 32px;
+    }
+  }
+
   &__subtitle {
     font-size: 28px;
     text-transform: uppercase;
@@ -49,6 +70,10 @@
     @include r($phone) {
       font-size: 18px;
       letter-spacing: 0.9px;
+    }
+
+    &.black {
+      color: $black;
     }
   }
 }
