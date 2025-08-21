@@ -21,6 +21,11 @@ export function modalQuote() {
     };
 
     const openModal = () => {
+      [document.body, document.querySelector('.header__mobile'), document.querySelector('.menu-btn')].forEach(el => {
+        if (el?.classList.contains('active')) el.classList.remove('active');
+      });
+
+      document.body.classList.remove('menu-active');
       modal.classList.add('active');
       document.body.classList.add('modal-active');
       document.documentElement.classList.add('active');

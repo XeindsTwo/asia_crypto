@@ -1,3 +1,141 @@
 .home {
+  min-height: 800px;
+  position: relative;
+  @media (max-width: 1300px) {
+    min-height: 700px;
+  }
+  @media (max-width: 1100px) {
+    min-height: 620px;
+  }
+  @include r($lg) {
+    min-height: auto;
+  }
+  @include r($tablet) {
+    padding-top: 50px;
+  }
 
+  &__inner {
+    @include r($lg) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    font-family: $montserrat;
+    max-width: 505px;
+    line-height: 1.05;
+    margin-bottom: 50px;
+    @media (max-width: 1300px) {
+      font-size: 60px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 56px;
+      margin-bottom: 40px;
+    }
+    @include r($lg) {
+      margin: 0 auto 40px;
+    }
+    @media (max-width: 900px) {
+      font-size: 52px;
+      line-height: 1;
+    }
+    @media (max-width: 800px) {
+      font-size: 50px;
+    }
+    @include r($tablet) {
+      font-size: 48px;
+    }
+    @include r($sm) {
+      font-size: 46px;
+    }
+    @media (max-width: 530px) {
+      font-size: 44px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-family: $inter;
+    margin-bottom: 35px;
+    @include r($lg) {
+      font-size: 18px;
+    }
+    @include r($tablet) {
+      margin-bottom: 25px;
+    }
+    @include r($sm) {
+      font-size: 17px;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    @media (max-width: 1100px) {
+      font-size: 17px;
+    }
+    @include r($lg) {
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    @include objectCoverBg;
+    object-position: left;
+    position: absolute;
+    right: -370px;
+    bottom: 0;
+    z-index: -1;
+    @media (max-width: 1760px) {
+      right: -520px;
+      height: 100%;
+    }
+    @media (max-width: 1500px) {
+      right: -430px;
+    }
+    @media (max-width: 1300px) {
+      right: -360px;
+    }
+    @include r($desktop) {
+      right: -300px;
+    }
+    @media (max-width: 1100px) {
+      right: -330px;
+    }
+    @include r($lg) {
+      display: none;
+    }
+
+    &.adaptive {
+      display: none;
+      @include r($lg) {
+        display: block;
+        right: 0;
+        width: 100%;
+        top: -80px;
+        height: 650px;
+        object-position: center;
+        z-index: -2;
+      }
+      @media (max-width: 860px) {
+        height: 600px;
+        top: -40px;
+      }
+      @media (max-width: 790px) {
+        height: 580px;
+        top: -20px;
+      }
+      @media (max-width: 680px) {
+        height: 530px;
+        top: -30px;
+      }
+      @media (max-width: 530px) {
+        right: -120px;
+        height: 495px;
+        opacity: 0.8;
+        object-position: right;
+      }
+    }
+  }
 }

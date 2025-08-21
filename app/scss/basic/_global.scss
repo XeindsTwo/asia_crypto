@@ -59,6 +59,17 @@
 
     &::before {
       opacity: 1;
+      z-index: 800;
+      visibility: visible;
+    }
+  }
+
+  &.menu-active {
+    overflow-y: hidden;
+
+    &::before {
+      opacity: 1;
+      z-index: 500;
       visibility: visible;
     }
   }

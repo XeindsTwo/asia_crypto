@@ -3,20 +3,20 @@ export function setupMobileMenu() {
   const body = document.body;
   const menuBtn = document.querySelector('.menu-btn');
   const headerMobile = document.querySelector('.header__mobile');
-  const header = document.querySelector('.header'); // добавляем основной header
+  const header = document.querySelector('.header');
   const anchors = document.querySelectorAll('a.mobile');
 
   menuBtn.addEventListener('click', () => {
     menuBtn.blur();
     html.classList.toggle('active');
-    body.classList.toggle('modal-active');
+    body.classList.toggle('menu-active');
     menuBtn.classList.toggle('active');
     headerMobile.classList.toggle('active');
   });
 
   function closeMenu() {
     html.classList.remove('active');
-    body.classList.remove('modal-active');
+    body.classList.remove('menu-active');
     menuBtn.classList.remove('active');
     headerMobile.classList.remove('active');
   }
