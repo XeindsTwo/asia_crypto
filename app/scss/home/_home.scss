@@ -18,6 +18,9 @@
     @include r($lg) {
       text-align: center;
     }
+    @include r($phone) {
+      text-align: left;
+    }
   }
 
   &__title {
@@ -53,6 +56,12 @@
       font-size: 44px;
       margin-bottom: 30px;
     }
+    @include r($phone) {
+      font-size: 42px;
+    }
+    @media (max-width: 375px) {
+      font-size: 40px;
+    }
   }
 
   &__text {
@@ -68,6 +77,9 @@
     @include r($sm) {
       font-size: 17px;
     }
+    @include r($phone) {
+      margin-bottom: 35px;
+    }
   }
 
   &__btn {
@@ -77,6 +89,10 @@
     }
     @include r($lg) {
       margin: 0 auto;
+    }
+    @include r($phone) {
+      font-size: 16px;
+      margin: 0;
     }
   }
 
@@ -135,6 +151,10 @@
         height: 495px;
         opacity: 0.8;
         object-position: right;
+      }
+      @media (max-width: 420px) {
+        top: -55px;
+        opacity: .9;
       }
     }
   }

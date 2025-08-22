@@ -162,32 +162,20 @@
   &__img {
     @include objectCoverBg;
     position: absolute;
-    left: 11.6%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 70px;
     z-index: -2;
     max-width: 1460px;
     height: 740px;
-    @media (max-width: 1640px) {
-      left: 5%;
-    }
-    @media (max-width: 1520px) {
-      left: 1%;
-    }
-    @media (max-width: 1400px) {
-      left: -3%;
-    }
-    @media (max-width: 1360px) {
-      left: -6%;
-    }
-    @media (max-width: 1300px) {
-      max-width: 100%;
-      left: 0;
-    }
     @media (max-width: 1100px) {
       height: 720px;
       bottom: 60px;
     }
     @media (max-width: 1030px) {
+      max-width: 100%;
+      left: 0;
+      transform: none;
       min-width: 1220px;
       position: static;
       margin-top: -700px;
