@@ -61,3 +61,24 @@ new Swiper('.slider-plans', {
     }
   },
 });
+
+const container = document.querySelector('.home');
+const dragon = document.querySelector('.home__img:not(.money)');
+const coins = document.querySelector('.home__img.money');
+
+container.addEventListener('mousemove', (e) => {
+  const rect = container.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const moveX = (x - rect.width / 2) / 50;
+  const moveY = (y - rect.height / 2) / 80;
+
+  dragon.style.transform = `translateX(${moveX}px)`;
+  coins.style.transform = `translate(${ -moveX }px, ${moveY}px)`;
+});
+
+container.addEventListener('mouseleave', () => {
+  dragon.style.transform = 'translateX(0)';
+  coins.style.transform = 'translate(0,0)';
+});

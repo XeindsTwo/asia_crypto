@@ -13,6 +13,9 @@
   @include r($tablet) {
     padding-top: 50px;
   }
+  @media (max-width: 410px) {
+    padding: 40px 0;
+  }
 
   &__inner {
     @include r($lg) {
@@ -66,6 +69,8 @@
 
   &__text {
     font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
     font-family: $inter;
     margin-bottom: 35px;
     @include r($lg) {
@@ -79,6 +84,16 @@
     }
     @include r($phone) {
       margin-bottom: 35px;
+      max-width: 320px;
+    }
+    @media (max-width: 390px) {
+      max-width: 270px;
+    }
+
+    br {
+      @include r($phone) {
+        display: none;
+      }
     }
   }
 
@@ -94,30 +109,57 @@
       font-size: 16px;
       margin: 0;
     }
+    @media (max-width: 400px) {
+      font-size: 15px;
+    }
   }
 
   &__img {
     @include objectCoverBg;
-    object-position: left;
+    transition: transform 0.8s ease-out;
+    object-position: top left;
     position: absolute;
-    right: -370px;
+    right: -40px;
     bottom: 0;
     z-index: -1;
+    @media (min-width: 1921px) {
+      object-position: bottom left;
+      bottom: auto;
+      top: 0;
+      height: 100%;
+      max-width: none;
+      width: 100%;
+    }
+    @media (min-width: 2060px) {
+      object-position: left -150px;
+      width: 100%;
+    }
+    @media (min-width: 2200px) {
+      object-position: left -120px;
+    }
+    @media (min-width: 2300px) {
+      object-position: left -190px;
+    }
     @media (max-width: 1760px) {
-      right: -520px;
+      right: 0;
       height: 100%;
     }
-    @media (max-width: 1500px) {
-      right: -430px;
+    @media (max-width: 1620px) {
+      object-position: right;
+      right: -100px;
     }
-    @media (max-width: 1300px) {
-      right: -360px;
+    @media (max-width: 1500px) {
+      right: -210px;
+      height: 107%;
+    }
+    @media (max-width: 1360px) {
+      height: 100%;
     }
     @include r($desktop) {
-      right: -300px;
+      right: -170px;
     }
     @media (max-width: 1100px) {
-      right: -330px;
+      right: -190px;
     }
     @include r($lg) {
       display: none;
@@ -149,12 +191,16 @@
       @media (max-width: 530px) {
         right: -120px;
         height: 495px;
-        opacity: 0.8;
+        opacity: 1;
         object-position: right;
       }
       @media (max-width: 420px) {
-        top: -55px;
-        opacity: .9;
+        top: 0;
+        opacity: .8;
+        height: 100%;
+      }
+      @media (max-width: 400px) {
+
       }
     }
   }

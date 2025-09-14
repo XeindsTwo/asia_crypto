@@ -264,6 +264,7 @@
 
   &__text {
     font-size: 18px;
+    font-weight: 300;
     text-align: justify;
     @media (max-width: 850px) {
       text-align: center;
@@ -338,9 +339,9 @@
         left: -400px;
       }
       @include r($lg) {
-        width: 610px;
-        left: -300px;
-        top: -115px;
+        width: 660px;
+        left: -335px;
+        top: -170px;
       }
       @media (max-width: 850px) {
         margin-left: -335px;

@@ -1,36 +1,41 @@
 .menu-btn {
-  height: 45px;
   width: 45px;
+  height: 45px;
   cursor: pointer;
-  z-index: 1000;
   display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   border-radius: 50%;
-  transition: all .4s;
-  background-color: transparent;
-  border: 1px solid transparent;
+  background: transparent;
+  z-index: 1000;
+  transition: transform 0.4s ease;
+
   @include r($tablet) {
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%) translateX(-2px);
+    top: 6px;
   }
+
   @media (max-width: 415px) {
     width: 42px;
     height: 42px;
   }
-
-  &:hover {
-    .menu-btn__line, .menu-btn__line::after, .menu-btn__line::before {
-      background-color: $accent;
-    }
+  @media (max-width: 390px) {
+    width: 39px;
+    height: 39px;
   }
 
-  &:focus {
-    background-color: transparent;
-    border-color: $accent;
+  .line {
+    display: block;
+    height: 2px;
+    width: 80%;
+    background: $black;
+    margin: 4px 0;
+    border-radius: 1px;
+    transform-origin: center;
+    transition: all 0.3s ease;
   }
 
   &--header {
@@ -39,58 +44,47 @@
     }
   }
 
-  &__line,
-  &__line::after,
-  &__line::before {
-    background-color: $black;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 70%;
-    height: 2px;
-    transition: all .4s;
+  &:hover .line {
+    background: $accent;
   }
 
-  &__line::after,
-  &__line::before {
-    position: absolute;
-    width: 100%;
+  // исходное состояние (важно задать задержки!)
+  .middle {
+    transition: width 0.2s ease 0.5s; // задержка для обратного пути
   }
 
-  &__line {
-    position: relative;
-    display: flex;
+  .top {
+    transform: translateY(0) rotate(0);
+    transition: transform 0.3s ease 0.5s;
+  }
 
-    &::before {
-      margin-top: -8px;
-    }
-
-    &::after {
-      margin-top: 8px;
-    }
+  .bottom {
+    transform: translateY(0) rotate(0);
+    transition: transform 0.3s ease 0.5s;
   }
 
   &.active {
-    border-color: transparent;
+    transform: rotate(45deg);
 
-    .menu-btn__line {
-      background: transparent;
-      transition: all .4s;
-      transform: rotate(-90deg);
+    .middle {
+      width: 5px;
+      transition: width 0.2s ease; // сразу сжимается
+    }
 
-      &::before {
-        margin-top: 0;
-        transform: rotate(-45deg);
-        transition-delay: .4s;
-        background-color: $accent;
-      }
+    .top {
+      transform: translateY(10px) rotate(0);
+      transition: transform 0.3s ease 0.2s;
+    }
 
-      &::after {
-        margin-top: 0;
-        transform: rotate(45deg);
-        transition-delay: .4s;
-        background-color: $accent;
-      }
+    .bottom {
+      transform: rotate(90deg) translateX(-9px);
+      transition: transform 0.3s ease 0.2s;
+    }
+
+    .top,
+    .bottom {
+      background: $accent;
+      transition: transform 0.3s ease 0.5s;
     }
   }
 }

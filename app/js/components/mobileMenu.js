@@ -6,7 +6,16 @@ export function setupMobileMenu() {
   const header = document.querySelector('.header');
   const anchors = document.querySelectorAll('a.mobile');
 
+  let isLocked = false;
+
   menuBtn.addEventListener('click', () => {
+    if (isLocked) return;
+
+    isLocked = true;
+    setTimeout(() => {
+      isLocked = false;
+    }, 750);
+
     menuBtn.blur();
     html.classList.toggle('active');
     body.classList.toggle('menu-active');
@@ -27,7 +36,7 @@ export function setupMobileMenu() {
       closeMenu();
       setTimeout(() => {
         const targetOffset = targetSection.offsetTop - 25;
-        window.scrollTo({ top: targetOffset, behavior: 'smooth' });
+        window.scrollTo({top: targetOffset, behavior: 'smooth'});
       }, 700);
     }
   }
@@ -44,12 +53,15 @@ export function setupMobileMenu() {
 
   for (const anchor of anchors) {
     anchor.addEventListener('click', handleAnchorClick);
-    anchor.addEventListener('touchstart', handleAnchorClick, { passive: true });
+    anchor.addEventListener('touchstart', handleAnchorClick, {passive: true});
   }
 
-  // Закрытие меню при клике вне header/header__mobile
   document.addEventListener('click', (event) => {
-    if (!header.contains(event.target) && !headerMobile.contains(event.target) && !menuBtn.contains(event.target)) {
+    if (
+      !header.contains(event.target) &&
+      !headerMobile.contains(event.target) &&
+      !menuBtn.contains(event.target)
+    ) {
       closeMenu();
     }
   });

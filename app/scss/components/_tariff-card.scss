@@ -7,6 +7,7 @@
   padding: 70px 35px;
   background-color: $white;
   box-shadow: 0 2px 10px 0 #B7A18F;
+  transition: box-shadow .4s, transform .4s;
   @include r($desktop) {
     padding: 65px 28px;
   }
@@ -15,6 +16,11 @@
   }
   @media (max-width: 680px) {
     padding: 40px 25px;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 10px 0 #B7A18F;
+    transform: translateY(-11px);
   }
 
   &__head {
@@ -83,6 +89,7 @@
     &-title {
       font-size: 20px;
       font-weight: 300;
+      letter-spacing: 0.5px;
       font-family: $inter;
       @include r($desktop) {
         font-size: 18px;
@@ -152,6 +159,8 @@
     line-height: 1.2;
     color: #1A1A1A;
     font-family: $inter;
+    font-weight: 300;
+    letter-spacing: 0.5px;
     @include r($desktop) {
       gap: 20px;
     }

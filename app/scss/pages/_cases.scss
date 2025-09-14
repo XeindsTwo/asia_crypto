@@ -39,6 +39,7 @@
   }
 
   &__img {
+    animation: slideIn 0.4s ease-out forwards;
     @include objectCoverBg;
     position: absolute;
     right: 45px;
@@ -337,5 +338,16 @@
   .cases__tab {
     flex: 0 0 auto;
     white-space: nowrap;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

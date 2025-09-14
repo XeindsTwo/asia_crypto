@@ -35,8 +35,6 @@
     letter-spacing: 0.5px;
     font-family: $inter;
     text-align: justify;
-    leading-trim: both;
-    text-edge: cap;
     @include r($lg) {
       font-size: 18px;
     }

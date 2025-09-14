@@ -73,11 +73,8 @@
     }
 
     &:hover {
-      border-color: #D02138;
-      background-color: transparent;
-      @include r($phone) {
-        background-color: #D02138;
-      }
+      border-color: transparent;
+      background-color: $black50;
 
       svg path {
         fill: $white;
@@ -140,6 +137,7 @@
 
   &__subtext {
     font-size: 18px;
+    font-weight: 300;
     text-align: center;
     color: #4A4A4A;
     max-width: 250px;

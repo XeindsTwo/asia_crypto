@@ -72,6 +72,8 @@
     font-family: $inter;
     color: rgba(#fff, 0.85);
     margin-bottom: 45px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
     @include r($phone) {
       max-width: 280px;
       font-size: 19px;

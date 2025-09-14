@@ -17,7 +17,9 @@
 
   &__text {
     font-family: $inter;
-    max-width: 850px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    max-width: 890px;
     font-size: 20px;
     margin: 0 auto 50px;
     @include r($lg) {
