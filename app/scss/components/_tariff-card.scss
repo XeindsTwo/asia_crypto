@@ -21,6 +21,10 @@
   &:hover {
     box-shadow: 0 5px 10px 0 #B7A18F;
     transform: translateY(-11px);
+    @media (max-width: 900px) {
+      box-shadow: 0 2px 10px 0 #B7A18F;
+      transform: none;
+    }
   }
 
   &__head {
