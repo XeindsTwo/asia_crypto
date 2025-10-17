@@ -1,32 +1,43 @@
 .pricing {
   background-color: #fff;
 
-  &__tabs {
-    @include flex-align-center(22);
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 64px;
-    @include r($lg) {
-      max-width: 520px;
-      margin: 0 auto 52px;
-    }
+  &__swiper {
+    cursor: grab;
+    margin-bottom: 76px;
     @include r($tablet) {
-      margin-bottom: 42px;
-      gap: 16px;
-      max-width: 460px;
+      margin-bottom: 50px;
+      padding: 0 20px;
     }
-    @media (max-width: 610px) {
-      max-width: 420px;
-      margin: 0 auto 48px;
+
+    .swiper-slide {
+      width: max-content;
     }
-    @media (max-width: 520px) {
-      max-width: 390px;
-      margin: 0 auto 40px;
+
+    .swiper-wrapper {
+      @media (min-width: 800px) {
+        justify-content: center !important;
+      }
     }
-    @include r($phone) {
-      max-width: 370px;
-      gap: 20px 16px;
-      margin: 0 auto 35px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: -15px;
+      background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &::after {
+      right: -15px;
+      background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
     }
   }
 
@@ -44,18 +55,14 @@
     border-radius: 5px;
     border: 2px solid transparent;
     transition: color .4s, border .4s, background-color .4s;
+    user-select: none;
     @include r($lg) {
       font-size: 24px;
     }
     @include r($tablet) {
-      font-size: 23px;
       padding: 5px 7px;
     }
-    @include r($sm) {
-      font-size: 22px;
-    }
     @include r($phone) {
-      font-size: 20px;
       padding: 4px 5px;
     }
 
@@ -70,7 +77,6 @@
 
     &--active {
       color: $accent;
-      pointer-events: none;
     }
   }
 }

@@ -14,12 +14,7 @@ a {
   outline: transparent;
 }
 
-ul,
-ol {
-  padding: 0;
-}
-
-ul {
+ul, ol {
   list-style: none;
 }
 
@@ -35,6 +30,11 @@ ul,
 ol,
 blockquote {
   margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
 }
 
 img {

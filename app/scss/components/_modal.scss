@@ -194,7 +194,7 @@
   }
 
   &__ages {
-    margin-bottom: 36px;
+    margin-bottom: 30px;
   }
 
   &__country, &__age {
@@ -202,23 +202,25 @@
     align-items: center;
     gap: 24px;
     justify-content: space-between;
+    color: #4A4A4A;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 
     &-name {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #4A4A4A;
     }
   }
 
   &__percent {
     font-size: 16px;
     font-weight: 400;
-    color: #686868;
   }
 
   &__btn {
     margin: 0 auto;
+    font-size: 18px;
   }
 
   &__svg {

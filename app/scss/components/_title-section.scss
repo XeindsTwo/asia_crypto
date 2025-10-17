@@ -1,6 +1,6 @@
 .title-section {
   font-size: 60px;
-  line-height: 1.1;
+  line-height: 1.05;
   font-weight: 700;
   color: #1A1A1A;
   text-transform: uppercase;
@@ -19,8 +19,11 @@
   @include r($sm) {
     font-size: 40px;
   }
-  @include r($phone) {
+  @media (max-width: 410px) {
     font-size: 38px;
+  }
+  @media (max-width: 390px) {
+    font-size: 36px;
   }
 
   &.small {
@@ -51,25 +54,16 @@
     color: $accent;
     font-family: $inter;
     display: block;
-    margin-bottom: 17px;
+    margin-bottom: 5px;
     @media (max-width: 1300px) {
       font-size: 26px;
     }
     @media (max-width: 1100px) {
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       font-size: 24px;
     }
-    @include r($lg) {
+    @media (max-width: 440px) {
       font-size: 22px;
-      letter-spacing: 1.6px;
-    }
-    @include r($sm) {
-      font-size: 20px;
-      letter-spacing: 1.2px;
-    }
-    @include r($phone) {
-      font-size: 18px;
-      letter-spacing: 0.9px;
     }
 
     &.black {

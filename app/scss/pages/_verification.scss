@@ -18,14 +18,11 @@
     @media (max-width: 860px) {
       padding: 80px 0 100px;
     }
-    @include r($sm) {
-      padding: 65px 0 80px;
-    }
-    @media (max-width: 530px) {
-      padding-top: 55px;
+    @include r($tablet) {
+      padding: 80px 0;
     }
     @include r($phone) {
-      padding-top: 50px;
+      overflow: visible;
     }
 
     & > div:first-child {
@@ -48,38 +45,32 @@
       width: 360px;
       opacity: .8;
     }
-    @media (max-width: 860px) {
-      width: 330px;
-    }
-    @media (max-width: 700px) {
-      width: 310px;
-    }
-    @media (max-width: 530px) {
-      width: 290px;
+    @include r($tablet) {
+      width: 450px;
+      top: 55%;
     }
     @include r($phone) {
-      width: 280px;
-    }
-    @media (max-width: 390px) {
-      width: 270px;
+      width: calc(103% + 20px);
+      max-width: none;
+      top: 50%;
     }
   }
 
   &__title {
     margin-bottom: 15px;
     @include r($phone) {
-      font-size: 36px;
+      max-width: 400px;
+      margin: 0 auto 15px;
     }
   }
 
   &__subtitle {
     margin-bottom: 40px;
-    @include r($phone) {
-      margin-bottom: 30px;
+    @include r($lg) {
+      margin-bottom: 45px;
     }
     @media (max-width: 410px) {
-      max-width: 240px;
-      margin: 0 auto 40px;
+      margin: 0 auto 45px;
     }
   }
 
@@ -87,16 +78,13 @@
     font-size: 20px;
     font-weight: 300;
     font-family: $inter;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     @include r($lg) {
       max-width: 550px;
       margin: 0 auto 25px;
     }
     @include r($tablet) {
-      font-size: 19px;
-    }
-    @media (max-width: 530px) {
-      font-size: 18px;
+      margin-bottom: 42px;
     }
     @include r($phone) {
       max-width: 350px;
@@ -110,50 +98,34 @@
   }
 
   &__message {
-    @include flex-column(16);
+    @include flex-column(20);
     align-items: center;
-    margin-top: 35px;
+    margin-top: 50px;
     @include r($lg) {
-      gap: 12px;
+      gap: 18px;
     }
     @include r($sm) {
-      margin-top: 30px;
-      gap: 10px;
+      gap: 14px;
     }
 
     &-text {
-      @include flex-align-center(20);
+      display: inline-block;
       font-weight: 400;
       font-family: $inter;
       font-size: 32px;
       letter-spacing: 1.7px;
       @include r($desktop) {
         font-size: 30px;
-        gap: 17px;
-      }
-      @include r($lg) {
-        font-size: 26px;
-        gap: 15px;
       }
       @include r($tablet) {
-        font-size: 24px;
+        font-size: 28px;
       }
       @include r($sm) {
-        gap: 11px;
-        font-size: 22px;
+        font-size: 26px;
 
         img {
           width: 22px;
           height: 22px;
-        }
-      }
-      @include r($phone) {
-        font-size: 20px;
-        gap: 7px;
-
-        img {
-          width: 19px;
-          height: 19px;
         }
       }
 
@@ -163,6 +135,19 @@
 
       &.error {
         color: $accent;
+      }
+
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 14px;
+        margin-top: -3px;
+        @include r($tablet) {
+          margin-right: 8px;
+        }
+        @include r($phone) {
+          margin-right: 5px;
+        }
       }
     }
 
@@ -194,18 +179,15 @@
       gap: 22px;
     }
     @include r($tablet) {
-      flex-wrap: wrap;
+      justify-content: space-between;
       gap: 25px 30px;
-      padding: 16px 8px;
+      padding: 7px 14px;
       border-color: #1A1A1A;
-      border-radius: 26px;
+      border-radius: 50px;
+      max-width: 500px;
     }
-    @media (max-width: 680px) {
-      padding: 18px 14px;
-      border-radius: 20px;
-    }
-    @media (max-width: 650px) {
-      flex-direction: column;
+    @media (max-width: 530px) {
+      gap: 17px;
     }
     @media (max-width: 400px) {
       margin: 0 -4px;
@@ -216,6 +198,18 @@
     @include flex-align-center(15);
     @include r($lg) {
       gap: 8px;
+    }
+    @include r($tablet) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      @include r($tablet) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -268,9 +262,9 @@
 
   &__input {
     border: none;
+    font-weight: 300;
     @include r($tablet) {
       max-width: 440px;
-      border-bottom: 1px solid #4a4a4a;
     }
     @media (max-width: 750px) {
       max-width: 410px;
@@ -302,6 +296,10 @@
     transform: none;
     @include r($tablet) {
       min-width: 160px;
+    }
+    @include r($sm) {
+      padding: 17px 32px;
+      min-width: 135px;
     }
 
     &:disabled {

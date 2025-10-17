@@ -1,11 +1,26 @@
 .agreement {
   &__title {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     @include r($lg) {
-      margin-bottom: 60px;
+      margin-bottom: 90px;
+    }
+    @include r($tablet) {
+      text-align: center;
     }
     @include r($phone) {
       margin-bottom: 45px;
+    }
+  }
+
+  &__subtitle {
+    @include r($tablet) {
+      text-align: center;
+    }
+  }
+
+  &__content {
+    @include r($tablet) {
+      margin: 0 35px;
     }
   }
 
@@ -20,9 +35,6 @@
       grid-gap: 65px;
     }
     @include r($tablet) {
-      grid-gap: 55px;
-    }
-    @media (max-width: 670px) {
       grid-gap: 30px;
       grid-template-columns: repeat(1, 1fr);
     }
@@ -35,19 +47,9 @@
     letter-spacing: 0.5px;
     font-family: $inter;
     text-align: justify;
-    @include r($lg) {
-      font-size: 18px;
-    }
     @include r($phone) {
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 400;
-    }
-
-    &:last-child {
-      @media (max-width: 670px) {
-        padding-top: 30px;
-        border-top: 1px solid rgba($accent, .5);
-      }
     }
   }
 
