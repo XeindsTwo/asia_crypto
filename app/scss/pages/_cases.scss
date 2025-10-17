@@ -152,9 +152,18 @@
     @include r($sm) {
       grid-gap: 26px 16px;
     }
+    @media (max-width: 500px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 420px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 210px;
+      margin: 0 auto;
+    }
 
     & > * {
-      flex: 0 1 284px;
+      flex: 0 1 282px;
       @media (max-width: 1100px) {
         flex: 0 1 270px;
       }
@@ -173,9 +182,6 @@
       @media (max-width: 510px) {
         flex: 0 1 210px;
       }
-      @media (max-width: 480px) {
-        flex: 0 1 280px;
-      }
     }
   }
 
@@ -193,6 +199,9 @@
     }
     @include r($lg) {
       width: 100%;
+    }
+    @include r($tablet) {
+      padding-bottom: 15px;
     }
     @media (max-width: 720px) {
       border-radius: 15px;
@@ -236,10 +245,10 @@
       height: 190px;
     }
     @media (max-width: 500px) {
-      height: 200px;
+      height: 170px;
     }
-    @media (max-width: 480px) {
-      height: 230px;
+    @media (max-width: 420px) {
+      height: 180px;
     }
   }
 
@@ -264,8 +273,11 @@
       letter-spacing: 1.6px;
     }
     @include r($tablet) {
-      font-size: 24px;
+      font-size: 28px;
       letter-spacing: 1.3px;
+    }
+    @media (max-width: 610px) {
+      font-size: 26px;
     }
   }
 
@@ -289,7 +301,7 @@
       font-size: 15px;
     }
     @include r($phone) {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 
