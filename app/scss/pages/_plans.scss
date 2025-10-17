@@ -32,12 +32,17 @@
 
   &__text {
     font-size: 20px;
+    text-align: justify;
     font-weight: 300;
     font-family: $inter;
-    max-width: 560px;
+    max-width: 550px;
     letter-spacing: .5px;
     @include r($desktop) {
+      text-align: center;
       margin: 0 auto;
+    }
+    @include r($tablet) {
+      color: #1A1A1A;
     }
     @include r($sm) {
       max-width: 380px;
@@ -80,7 +85,7 @@
         top: -89px;
         height: 122%;
         right: 0;
-        opacity: .35;
+        opacity: .3;
       }
       @media (max-width: 420px) {
         height: 130%;
