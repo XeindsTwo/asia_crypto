@@ -77,9 +77,12 @@
 
 .container {
   max-width: 1230px;
-  padding: 0 18px;
+  padding: 0 15px;
   margin: 0 auto;
   width: 100%;
+  @include r($tablet) {
+    padding: 0 18px;
+  }
 
   &.relative {
     position: relative;

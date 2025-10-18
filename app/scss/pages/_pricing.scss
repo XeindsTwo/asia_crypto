@@ -1,6 +1,13 @@
 .pricing {
   background-color: #fff;
 
+  &__svg {
+    display: none;
+    @media (max-width: 800px) {
+      display: block;
+    }
+  }
+
   &__swiper {
     cursor: grab;
     margin-bottom: 76px;

@@ -13,11 +13,11 @@
     letter-spacing: 2.5px;
     color: #1A1A1A;
     @include r($desktop) {
-      font-size: 44px;
+      font-size: 40px;
       letter-spacing: 2px;
     }
     @include r($lg) {
-      font-size: 40px;
+      font-size: 38px;
       letter-spacing: 1.6px;
       margin-bottom: 20px;
     }
@@ -27,18 +27,16 @@
     @include r($tablet) {
       font-size: 34px;
     }
-    @include r($sm) {
-      font-size: 32px;
-    }
     @media (max-width: 580px) {
       max-width: 340px;
       margin: 0 auto 20px;
     }
-    @include r($phone) {
-      font-size: 30px;
-    }
-    @media (max-width: 380px) {
-      font-size: 28px;
+
+    br {
+      display: none;
+      @media (max-width: 700px) {
+        display: block;
+      }
     }
   }
 
@@ -47,17 +45,14 @@
     font-size: 20px;
     font-weight: 300;
     font-family: $inter;
-    margin: 0 auto 50px;
+    margin: 0 auto 44px;
     letter-spacing: 0.5px;
     text-align: center;
-    @include r($lg) {
-      font-size: 18px;
-    }
     @media (max-width: 700px) {
-      max-width: 450px;
+      max-width: 400px;
     }
     @include r($phone) {
-      font-size: 17px;
+      font-size: 19px;
       margin-bottom: 40px;
     }
 

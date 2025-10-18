@@ -229,9 +229,6 @@
     @include r($desktop) {
       font-size: 18px;
     }
-    @include r($tablet) {
-      font-size: 17px;
-    }
 
     &.black {
       background-color: #4A4A4A;
