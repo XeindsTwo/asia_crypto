@@ -1,8 +1,5 @@
 .info {
   background-color: $white;
-  @include r($sm) {
-    padding-bottom: 20px;
-  }
 
   &__title {
     text-align: center;
@@ -20,11 +17,17 @@
       font-size: 18px;
       max-width: 590px;
     }
+    @include r($tablet) {
+      font-size: 19px;
+    }
     @include r($sm) {
       margin-bottom: 40px;
     }
-    @media (max-width: 560px) {
-      font-size: 17px;
+  }
+
+  &__navigation {
+    @media (max-width: 700px) {
+      display: none;
     }
   }
 
@@ -33,6 +36,18 @@
     @include r($lg) {
       display: block;
       overflow: visible;
+    }
+
+    .swiper-slide {
+      @media (max-width: 700px) {
+        width: 260px;
+      }
+      @media (max-width: 410px) {
+        width: 240px;
+      }
+      @media (max-width: 385px) {
+        width: 230px;
+      }
     }
 
     .swiper-wrapper {
@@ -94,14 +109,8 @@
     @include objectCoverBg;
     margin: 0 auto 25px;
     @include r($desktop) {
-      width: 152px;
+      width: 160px;
       height: auto;
-    }
-    @include r($lg) {
-      width: 142px;
-    }
-    @include r($phone) {
-      width: 150px;
     }
   }
 
@@ -118,20 +127,12 @@
       font-size: 30px;
       letter-spacing: 2px;
     }
-    @media (max-width: 1100px) {
-      font-size: 28px;
-    }
-    @include r($tablet) {
-      font-size: 26px;
-    }
-    @include r($phone) {
-      font-size: 28px;
-    }
   }
 
   &__tag {
     color: $accent;
     font-size: 16px;
+    font-weight: 300;
   }
 
   &__line {
@@ -182,36 +183,19 @@
       font-size: 44px;
       letter-spacing: 2px;
     }
-    @media (max-width: 1100px) {
-      font-size: 40px;
-      letter-spacing: 1.5px;
-    }
     @include r($lg) {
-      font-size: 36px;
-      letter-spacing: 1.1px;
-    }
-    @include r($tablet) {
-      font-size: 34px;
-    }
-    @media (max-width: 510px) {
-      font-size: 32px;
+      font-size: 54px;
     }
     @include r($phone) {
-      font-size: 34px;
+      font-size: 50px;
     }
   }
 
   &__btn {
     margin: 50px auto 0;
     font-size: 18px;
-    @media (max-width: 1160px) {
-      font-size: 17px;
-    }
     @media (max-width: 1100px) {
       margin-top: 40px;
-    }
-    @include r($tablet) {
-      font-size: 16px;
     }
   }
 }

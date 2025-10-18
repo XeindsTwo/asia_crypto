@@ -1,5 +1,5 @@
-import { modalQuote } from "./components/modalQuote.js";
-import { setupMobileMenu } from "./components/mobileMenu.js";
+import {modalQuote} from "./components/modalQuote.js";
+import {setupMobileMenu} from "./components/mobileMenu.js";
 
 modalQuote();
 setupMobileMenu();
@@ -11,18 +11,15 @@ new Swiper(".info__swiper", {
     prevEl: ".slider-plans__btn--prev",
   },
   breakpoints: {
-    660: {
+    700: {
       slidesPerView: 3,
       spaceBetween: 15,
     },
-    468: {
-      slidesPerView: 2,
-      spaceBetween: 12,
-    },
     320: {
-      slidesPerView: 1,
+      slidesPerView: 'auto',
+      freeMode: true,
       spaceBetween: 12,
-    },
+    }
   },
 });
 

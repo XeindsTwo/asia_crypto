@@ -11,18 +11,23 @@
     min-height: auto;
   }
   @include r($tablet) {
-    padding-top: 50px;
+    padding: 70px 0;
+  }
+  @include r($sm) {
+    padding: 100px 0;
+  }
+  @media (max-width: 530px) {
+    margin-top: -100px;
+    padding-top: 200px;
   }
   @media (max-width: 410px) {
-    padding: 40px 0;
+    padding-top: 120px;
+    margin-top: -60px;
   }
 
   &__inner {
     @include r($lg) {
       text-align: center;
-    }
-    @include r($phone) {
-      text-align: left;
     }
   }
 
@@ -55,14 +60,13 @@
     @include r($sm) {
       font-size: 46px;
     }
-    @media (max-width: 530px) {
-      font-size: 44px;
-      margin-bottom: 30px;
-    }
     @include r($phone) {
+      font-size: 44px;
+    }
+    @media (max-width: 400px) {
       font-size: 42px;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 385px) {
       font-size: 40px;
     }
   }
@@ -77,17 +81,14 @@
       font-size: 18px;
     }
     @include r($tablet) {
-      margin-bottom: 25px;
-    }
-    @include r($sm) {
-      font-size: 17px;
+      margin-bottom: 50px;
+      font-size: 20px;
+      color: #1A1A1A;
     }
     @include r($phone) {
-      margin-bottom: 35px;
+      margin: 0 auto 35px;
       max-width: 320px;
-    }
-    @media (max-width: 390px) {
-      max-width: 270px;
+      font-size: 19px;
     }
 
     br {
@@ -105,12 +106,8 @@
     @include r($lg) {
       margin: 0 auto;
     }
-    @include r($phone) {
-      font-size: 16px;
-      margin: 0;
-    }
-    @media (max-width: 400px) {
-      font-size: 15px;
+    @include r($tablet) {
+      font-size: 18px;
     }
   }
 
@@ -189,18 +186,16 @@
         top: -30px;
       }
       @media (max-width: 530px) {
-        right: -120px;
-        height: 495px;
-        opacity: 1;
-        object-position: right;
+        display: none;
       }
-      @media (max-width: 420px) {
-        top: 0;
-        opacity: .8;
-        height: 100%;
-      }
-      @media (max-width: 400px) {
+    }
 
+    &.adaptive-two {
+      display: none;
+      @media (max-width: 530px) {
+        display: block;
+        top: 0;
+        height: 100%;
       }
     }
   }
