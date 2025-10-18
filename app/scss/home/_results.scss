@@ -2,9 +2,12 @@
   font-family: $inter;
   position: relative;
 
-  &__title {
+  &__title.title-section {
     @include r($lg) {
       text-align: center;
+    }
+    @include r($tablet) {
+      display: none;
     }
   }
 
@@ -13,9 +16,23 @@
     @include r($lg) {
       text-align: center;
     }
-    @include r($phone) {
-      max-width: 330px;
-      margin: 0 auto 40px;
+    @include r($tablet) {
+      font-size: 32px;
+      font-weight: 400;
+      max-width: 500px;
+      margin: 0 auto 50px;
+    }
+    @include r($sm) {
+      font-size: 28px;
+    }
+    @media (max-width: 530px) {
+      font-size: 26px;
+    }
+    @media (max-width: 400px) {
+      font-size: 25px;
+    }
+    @media (max-width: 385px) {
+      font-size: 24px;
     }
   }
 
@@ -27,11 +44,13 @@
     @media (max-width: 1100px) {
       grid-gap: 75px;
     }
-    @include r($lg) {
+    @include r($tablet) {
+      grid-gap: 50px;
+    }
+    @media (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
-      grid-gap: 25px;
-      max-width: 680px;
-      margin: 0 auto 80px;
+      grid-gap: 30px;
+      margin-bottom: 60px;
     }
   }
 
@@ -45,12 +64,6 @@
         font-size: 18px;
         letter-spacing: 0.3px;
       }
-      @include r($lg) {
-        text-align: center;
-      }
-      @include r($tablet) {
-        font-size: 17px;
-      }
 
       span {
         color: $accent;
@@ -59,29 +72,8 @@
   }
 
   &__wrapper {
-    @media (max-width: 1030px) {
-      user-select: none;
-      overflow-y: visible;
-      overflow-x: auto;
-      cursor: grab;
-      padding-right: 15px;
-      padding-top: 100px;
-      margin-top: -100px;
-      @include r($phone) {
-        padding-top: 80px;
-      }
-
-      &::-webkit-scrollbar {
-        height: 5px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background-color: rgba($accent, 0.2);
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: $accent;
-      }
+    @include r($desktop) {
+      display: none;
     }
   }
 
@@ -139,8 +131,9 @@
       font-size: 26px;
       margin-bottom: 16px;
     }
-    @media (max-width: 1100px) {
-      font-size: 24px;
+    @include r($desktop) {
+      margin-bottom: 20px;
+      text-align: left;
     }
     @media (max-width: 1030px) {
       br {
@@ -159,6 +152,17 @@
     font-size: 15px;
     font-weight: 300;
     text-align: center;
+    @include r($desktop) {
+      font-size: 16px;
+      text-align: justify;
+      color: #1A1A1A;
+    }
+    @include r($phone) {
+      font-size: 15px;
+    }
+    @media (max-width: 400px) {
+      font-size: 14px;
+    }
   }
 
   &__img {
@@ -191,6 +195,91 @@
       display: none;
       @media (max-width: 1030px) {
         display: block;
+      }
+    }
+  }
+
+  &__mobile {
+    &-list {
+      display: none;
+      @include r($desktop) {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 1090px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 25px 50px;
+      position: relative;
+      border: 1px solid #B71C1C;
+      border-radius: 25px;
+      min-height: 250px;
+      overflow: hidden;
+      @media (max-width: 1090px) {
+        max-width: 770px;
+        width: 100%;
+      }
+      @include r($tablet) {
+        padding: 20px 50px;
+      }
+      @include r($sm) {
+        padding-right: 30px;
+      }
+
+      &:nth-child(even) {
+        @media (max-width: 1090px) {
+          margin-left: auto;
+        }
+      }
+    }
+
+    &-content {
+      max-width: 290px;
+      margin-left: auto;
+      @media (max-width: 1090px) {
+        max-width: 500px;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (max-width: 1140px) {
+        left: -20px;
+      }
+      @media (max-width: 1090px) {
+        left: 0;
+      }
+      @include r($tablet) {
+        position: static;
+        transform: none;
+        margin-left: -50px;
+        margin-right: -50px;
+      }
+      @include r($sm) {
+        width: 246px;
+        margin-left: -60px;
+      }
+      @media (max-width: 510px) {
+        width: 230px;
+      }
+      @media (max-width: 455px) {
+        width: 220px;
+      }
+      @media (max-width: 420px) {
+        width: 200px;
+      }
+      @media (max-width: 400px) {
+        width: 180px;
+        margin-right: -42px;
       }
     }
   }
